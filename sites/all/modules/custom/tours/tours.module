@@ -1,0 +1,119 @@
+<?php
+/**
+ * @file
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function tours_menu() {
+  $item['show_tours'] = array(
+    'title' => 'Tours',
+    'page callback' => 'tours_get_tours',
+    'access callback' => TRUE,
+  );
+  $item['tours/autocomplete'] = array(
+    'title' => 'Autocomplete',
+    'page callback' => 'tours_autocomplete',
+    'access callback' => TRUE,
+  );
+  return $item;
+}
+
+/**
+ * Form builder for tour search form.
+ */
+function tours_tour_search_form($form, $form_state) {
+  $form['city'] = array(
+    '#type'	=> 'textfield',
+    '#title' => t('City ​​of departure'),
+    '#default_value' => '',
+    '#attributes' => array(
+    ),
+    '#autocomplete_path' => 'tours/autocomplete',
+  );
+  $form['search'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search'),
+    '#attributes' => array(
+    'class' => array(''),
+    ),
+  );
+
+  $form['#submit'][] = 'tours_tour_search_form_submit';
+  $form['#validate'][] = 'tours_tour_search_form_validate';
+
+  return $form;
+}
+
+/**
+ * Autocomplete callback.
+ */
+function tours_autocomplete($string) {
+  $url = 'http://search.tez-tour.com/toursearch/references';
+  $data = array(
+    'locale' => 'ru',
+    'formatResult' => 'true',
+    'xml' => 'false',
+  );
+  $full_url = url($url, array('query' => $data));
+  $result = drupal_http_request($full_url);
+  $result = json_decode($result->data);
+  $cities = $result->cities;
+  $matches = array();
+  if($string){
+    foreach($cities as $key => $value){
+      if(preg_match("/$string/i", $value->name)) {
+        $matches[$value->name] = $value->name;
+      }
+    }
+  }
+  drupal_json_output($matches);
+}
+
+/*
+ * Page callback tours/show_tours.
+ */
+function tours_get_tours() {
+  header ("Content-Type: text/html; charset=UTF-8");
+  $url = 'http://www.tez-tour.com/tariffsearch/getResult';
+  $data = array(
+    'priceMin' => '0',
+    'priceMax' => '15000',
+    'currency' => '5561',
+    'nightsMin' => '6',
+    'nightsMax' => '14',
+    'hotelClassId' => '2567',
+    'accommodationId' => '2',
+    'rAndBId' => '15350',
+    'tourType' => '1',
+    'locale' => 'ru',
+    'cityId' => '2190',
+    'countryId' => '12695',
+    'after' => '10.10.2014',
+    'before' => '31.10.2014',
+    'hotelId' => '147264',
+    'hotelInStop' => 'false',
+    'specialInStop' => 'false',
+    'version' => '2',
+    'tourId' => '14259',
+    'tourId' => '14259%2C14358',
+    'tourId' => '14259%2C14358',
+    'tourId' => '14369%2C14358',
+    'tourId' => '14372%2C14358',
+    'tourId' => '14369',
+    'hotelClassBetter' => 'true',
+    'rAndBBetter' => 'true',
+    'noTicketsTo' => 'false',
+    'noTicketsFrom' => 'false',
+    'searchTypeId' => '3',
+    'recommendedFlag' => 'false',
+    'salePrivateFlag' => 'false',
+    'onlineConfirmFlag' => 'false',
+  );
+  $full_url = url($url, array('query' => $data));
+  $result = drupal_http_request($full_url);
+  $tours = json_decode($result->data);
+  var_dump($tours);
+}
