@@ -1,3 +1,7 @@
 name = Tours theme
 package = Tours
 core = 7.x
+
+stylesheets[all][] = css/tours_theme.css
+
+scripts[] = js/tours_theme.js
