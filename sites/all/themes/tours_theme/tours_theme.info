@@ -2,6 +2,14 @@ name = Tours theme
 package = Tours
 core = 7.x
 
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/bootstrap.css.map
+stylesheets[all][] = css/bootstrap-theme.css
+stylesheets[all][] = css/bootstrap-theme.css.map
+stylesheets[all][] = css/bootstrap-theme.min.css
 stylesheets[all][] = css/tours_theme.css
 
+scripts[] = js/tours_theme.js
+scripts[] = js/bootstrap.min.js.js
 scripts[] = js/tours_theme.js

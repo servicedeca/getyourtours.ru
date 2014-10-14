@@ -28,18 +28,40 @@ function tours_menu() {
     'page callback' => 'tours_search_tours',
     'access callback' => TRUE,
   );
+  $item['tours/hotel/'] = array(
+    'title' => 'Hotel',
+    'page callback' => 'tours_hotel_tours',
+    //'page arguments' => array(3),
+    'access callback' => TRUE,
+  );
   return $item;
+}
+
+/**
+ * Implements hook_menu().
+ */
+
+function tours_theme() {
+
+  $items['tours_search_form'] = array(
+      'template' => 'tours_search_form',
+      'render element' => 'form',
+    );
+
+  return $items;
 }
 
 /**
  * Form builder for tour search form.
  */
 function tours_tour_search_form($form, $form_state) {
+
   $form['city'] = array(
     '#type'	=> 'textfield',
     '#title' => t('City ​​of departure'),
     '#default_value' => $_GET['city'],
     '#attributes' => array(
+      'class' => array('form-control'),
     ),
     '#autocomplete_path' => 'tours/autocomplete',
   );
@@ -49,6 +71,7 @@ function tours_tour_search_form($form, $form_state) {
     '#title' => t('Country to'),
     '#default_value' => $_GET['country_to'],
     '#attributes' => array(
+      'class' => array('form-control'),
     ),
     '#autocomplete_path' => 'tours/autocomplete_to',
   );
@@ -57,6 +80,9 @@ function tours_tour_search_form($form, $form_state) {
     '#type' => 'date_popup',
     '#title' => t('Date of'),
     '#date_format' => 'd.m.Y',
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
     '#default_value' => $_GET['date_of']['date'],
   );
 
@@ -64,81 +90,34 @@ function tours_tour_search_form($form, $form_state) {
     '#type' => 'date_popup',
     '#title' => t('Date to'),
     '#date_format' => 'd.m.Y',
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
     '#default_value' => $_GET['date_of']['date'],
+  );
+
+  $options = array('none' => '<none>');
+
+  $form['Accommodation'] = array(
+    '#type' => 'select',
+    '#title' => t('Accommodation'),
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
+    '#options' => $options,
   );
 
   $form['search'] = array(
     '#type' => 'submit',
     '#value' => t('Search'),
     '#attributes' => array(
-    'class' => array(''),
+      'class' => array('btn btn-default'),
     ),
   );
 
-  $form['#method'] = 'GET';
-
+  $form['#method'][] = 'GET';
+  $form['#theme'][] = 'tours_search_form';
   return $form;
-}
-
-
-/*
- * Submit for tours_tour_search_form.
- */
-function tours_tour_search_form_submit(&$form, &$form_state) {
-  $cities = tours_get_data_operator()->cities;
-  $countries = tours_get_data_operator()->countries;
-  foreach($cities as $value) {
-    if($value->name == $form['city']['#value']) {
-      $cityId = $value->cityId;
-    }
-  }
-  foreach($countries as $value) {
-    if($value->name == $form['country_to']['#value']) {
-      $countryId = $value->countryId;
-    }
-  }
-  $after = $form['date_of']['date']['#value'];
-  $before = $form['date_to']['date']['#value'];
-
-  $url = 'http://www.tez-tour.com/tariffsearch/getResult';
-  $data = array(
-    'priceMin' => '0',
-    'priceMax' => '15000',
-    'currency' => '5561',
-    'nightsMin' => '6',
-    'nightsMax' => '14',
-    'hotelClassId' => '2567',
-    'accommodationId' => '2',
-    'rAndBId' => '15350',
-    'tourType' => '1',
-    'locale' => 'ru',
-    'cityId' => $cityId,
-    'countryId' => $countryId,
-    'after' => $after,
-    'before' => $before,
-    //'hotelId' => '147264',
-    'hotelInStop' => 'false',
-    'specialInStop' => 'false',
-    'version' => '2',
-    'tourId' => '14259',
-    'tourId' => '14259%2C14358',
-    'tourId' => '14259%2C14358',
-    'tourId' => '14369%2C14358',
-    'tourId' => '14372%2C14358',
-    'tourId' => '14369',
-    'hotelClassBetter' => 'true',
-    'rAndBBetter' => 'true',
-    'noTicketsTo' => 'false',
-    'noTicketsFrom' => 'false',
-    'searchTypeId' => '3',
-    'recommendedFlag' => 'false',
-    'salePrivateFlag' => 'false',
-    'onlineConfirmFlag' => 'false',
-  );
-  $full_url = url($url, array('query' => $data));
-  $result = drupal_http_request($full_url);
-  $tours = json_decode($result->data);
-  var_dump($tours->date);
 }
 
 /*
@@ -194,55 +173,87 @@ function tours_autocomplete_to($string) {
 }
 
 /*
- * Page callback tours/search_tours
+ * Page callback tours/hotel
  */
 
-function tours_search_tours() {
-
+function tours_hotel_tours() {
+  $a = 1;
+  var_dump(tours_get_tours(2));
 }
 
 /*
  * Page callback tours/show_tours.
  */
-function tours_get_tours() {
-  header ("Content-Type: text/html; charset=UTF-8");
-  $url = 'http://www.tez-tour.com/tariffsearch/getResult';
-  $data = array(
-    'priceMin' => '0',
-    'priceMax' => '15000',
-    'currency' => '5561',
-    'nightsMin' => '6',
-    'nightsMax' => '14',
-    'hotelClassId' => '2567',
-    'accommodationId' => '2',
-    'rAndBId' => '15350',
-    'tourType' => '1',
-    'locale' => 'ru',
-    'cityId' => '2190',
-    'countryId' => '12695',
-    'after' => '10.10.2014',
-    'before' => '31.10.2014',
-    'hotelId' => '147264',
-    'hotelInStop' => 'false',
-    'specialInStop' => 'false',
-    'version' => '2',
-    'tourId' => '14259',
-    'tourId' => '14259%2C14358',
-    'tourId' => '14259%2C14358',
-    'tourId' => '14369%2C14358',
-    'tourId' => '14372%2C14358',
-    'tourId' => '14369',
-    'hotelClassBetter' => 'true',
-    'rAndBBetter' => 'true',
-    'noTicketsTo' => 'false',
-    'noTicketsFrom' => 'false',
-    'searchTypeId' => '3',
-    'recommendedFlag' => 'false',
-    'salePrivateFlag' => 'false',
-    'onlineConfirmFlag' => 'false',
-  );
-  $full_url = url($url, array('query' => $data));
-  $result = drupal_http_request($full_url);
-  $tours = json_decode($result->data);
-  var_dump($tours);
+function tours_get_tours($hotelId) {
+
+  if($_GET['city'] && !empty($_GET['city']) ) {
+    $cities = tours_get_data_operator()->cities;
+    $countries = tours_get_data_operator()->countries;
+    foreach($cities as $value) {
+      if($value->name == $_GET['city']) {
+        $cityId = $value->cityId;
+      }
+    }
+    foreach($countries as $value) {
+      if($value->name == $_GET['country_to']) {
+        $countryId = $value->countryId;
+      }
+    }
+    $data_directory = array(
+      'xml' => 'false',
+      'formatResult' => 'true'
+    );
+    $directory_url = 'http://search.tez-tour.com/toursearch/getCalcTypes';
+    $url = url($directory_url, array('query' => $data_directory));
+    $directory = drupal_http_request($url);
+    $directory = json_decode($directory->data)->calcByTariffs;
+    foreach($directory as $value) {
+      if($value->arrCountry == $countryId && $value->depCity == $cityId ){
+        $dynamics = 1;
+      }
+    }
+    $after = $_GET['date_of']['date'];
+    $before = $_GET['date_to']['date'];
+    if($dynamics == 1){
+      $url = 'http://www.tez-tour.com/tariffsearch/getResult';
+    }
+    else{
+      $url = 'http://www.tez-tour.com/toursearch/getResult';
+    }
+    $data = array(
+      'priceMin' => '0',
+      'priceMax' => '15000',
+      'currency' => '5561',
+      'nightsMin' => '6',
+      'nightsMax' => '14',
+      'hotelClassId' => '2567',
+      'accommodationId' => '1',
+      'rAndBId' => '15350',
+      'tourType' => '1',
+      'locale' => 'ru',
+      'cityId' => $cityId,
+      'countryId' => $countryId,
+      'after' => $after,
+      'before' => $before,
+      'hotelInStop' => 'false',
+      'specialInStop' => 'false',
+      'version' => '2',
+      'hotelClassBetter' => 'true',
+      'rAndBBetter' => 'true',
+      'hotelId' => $hotelId,
+      'noTicketsTo' => 'false',
+      'noTicketsFrom' => 'false',
+      'searchTypeId' => '3',
+      'recommendedFlag' => 'false',
+      'salePrivateFlag' => 'false',
+      'onlineConfirmFlag' => 'false',
+    );
+    $full_url = url($url, array('query' => $data));
+    $result = drupal_http_request($full_url);
+    return array(
+     'tours' => json_decode($result->data)->data,
+     'dynamics' => $dynamics,
+    );
+  }
+  return false;
 }

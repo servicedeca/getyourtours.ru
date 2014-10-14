@@ -4,92 +4,70 @@
  * Process variables for page.tpl.php.
  */
 function tours_theme_preprocess_page(&$vars, $hook) {
-
-  if($_GET['city']) {
-    $cities = tours_get_data_operator()->cities;
-    $countries = tours_get_data_operator()->countries;
-    foreach($cities as $value) {
-      if($value->name == $_GET['city']) {
-        $cityId = $value->cityId;
-      }
-    }
-    foreach($countries as $value) {
-      if($value->name == $_GET['country_to']) {
-        $countryId = $value->countryId;
-      }
-    }
   // Get site logo.
   $vars['logo'] = theme('image', array(
     'path' => theme_get_setting('logo_path'),
     'alt' => t(variable_get('site_name')),
     'title' => t(variable_get('site_name')),
   ));
-  $data_directory = array(
-    'xml' => 'false',
-    'formatResult' => 'true'
-  );
-  $directory_url = 'http://search.tez-tour.com/toursearch/getCalcTypes';
-  $url = url($directory_url, array('query' => $data_directory));
-  $directory = drupal_http_request($url);
-  $directory = json_decode($directory->data)->calcByTariffs;
-  foreach($directory as $value) {
-    if($value->arrCountry == $countryId && $value->depCity == $cityId ){
-      $dynamics = 1;
+  $tours = tours_get_tours(1);
+  if($tours['tours'] && $tours['dynamics'] == NULL) {
+    foreach($tours['tours'] as $tour) {
+      $vars['tours'][] = array(
+        'date_of' => $tour[1],
+        'date_to' => $tour[5],
+        'night' => $tour[4],
+        'city' => $tour[11],
+        'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $_GET) ),
+        'food' => $tour[14],
+        'image' => theme('image', array(
+          'path' => $tour[38],
+          'width' => '150px',
+          'height' => '150px',
+          'alt' => $tour[6],
+          'title' => $tour[6],
+        )),
+        'currency' => $tour[40],
+        'price' =>  $tour[39],
+      );
     }
   }
-    $after = $_GET['date_of']['date'];
-    $before = $_GET['date_to']['date'];
-    if($dynamics == 1){
-      $url = 'http://www.tez-tour.com/tariffsearch/getResult';
+  elseif($tours['tours'] && $tours['dynamics'] == 1) {
+    foreach($tours['tours'] as $tour) {
+      $vars['tours'][] = array(
+        'date_of' => $tour[0],
+        'date_to' => $tour[4],
+        'night' => $tour[3],
+        'city' => $tour[5][0],
+        'hotel' => l($tour[6][1],'hotel/', array('query' => $_GET) ),
+        'food' => $tour[7][1],
+        'image' => theme('image', array(
+          'path' => $tour[6][2],
+          'width' => '150px',
+          'height' => '150px',
+          'alt' => $tour[6][1],
+          'title' => $tour[6][1],
+        )),
+        'currency' => $tour[10]->currency,
+        'price' =>  $tour[10]->total,
+      );
     }
-    else{
-      $url = 'http://www.tez-tour.com/toursearch/getResult';
-    }
-    $data = array(
-      'priceMin' => '0',
-      'priceMax' => '15000',
-      'currency' => '5561',
-      'nightsMin' => '6',
-      'nightsMax' => '14',
-      'hotelClassId' => '2567',
-      'accommodationId' => '1',
-      'rAndBId' => '15350',
-      'tourType' => '1',
-      'locale' => 'ru',
-      'cityId' => $cityId,
-      'countryId' => $countryId,
-      'after' => $after,
-      'before' => $before,
-      //'hotelId' => '147264',
-      'hotelInStop' => 'false',
-      'specialInStop' => 'false',
-      'version' => '2',
-      'tourId' => '14259',
-      'tourId' => '14259%2C14358',
-      'tourId' => '14259%2C14358',
-      'tourId' => '14369%2C14358',
-      'tourId' => '14372%2C14358',
-      'tourId' => '14369',
-      'hotelClassBetter' => 'true',
-      'rAndBBetter' => 'true',
-      'noTicketsTo' => 'false',
-      'noTicketsFrom' => 'false',
-      'searchTypeId' => '3',
-      'recommendedFlag' => 'false',
-      'salePrivateFlag' => 'false',
-      'onlineConfirmFlag' => 'false',
-    );
-    $full_url = url($url, array('query' => $data));
-    $result = drupal_http_request($full_url);
-    $tours = json_decode($result->data);
-    //var_dump($tours->date);
-    $vars['date_of'] = $tours->data[0][0];
-    $vars['date_to'] = $tours->data[0][4];
-    $vars['night'] = $tours->data[0][3];
-    $vars['city'] = $tours->data[0][5][0];
-    $vars['hotel'] = $tours->data[0][6][1];
-    $vars['za'] = $tours->data[0][7][1];
   }
 
-  $vars['search_form'] = drupal_get_form('tours_tour_search_form');
+$vars['search_form'] = drupal_get_form('tours_tour_search_form');
+}
+
+/**
+ * Process variables for tours_search_form.tpl.php.
+ */
+function tours_preprocess_tours_search_form(&$vars) {
+
+  $vars['form']['#attributes']['class'][] = 'form-inline';
+  $vars['city'] = $vars['form']['city'];
+  $vars['country_to'] = $vars['form']['country_to'];
+  $vars['date_of'] = $vars['form']['date_of'];
+  $vars['date_to'] = $vars['form']['date_to'];
+  $vars['Accommodation'] = $vars['form']['Accommodation'];
+  $vars['search'] = $vars['form']['search'];
+
 }
