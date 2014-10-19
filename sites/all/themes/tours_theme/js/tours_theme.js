@@ -1,26 +1,32 @@
 (function ($) {
-  /*Drupal.behaviors.tours = {
-    attach: function(context, settings) {
-      $('#tours_tour_search_form').once().submit(function(e) {
-        e.preventDefault();
+  Drupal.behaviors.toursChildrenform = {
+    attach: $(function () {
+      $("#edit-country-to").change(function () {
+        var regionSelect = $('select[name="region"]');
+        var countrySelect = $('select[name="country_to"]')
+        //alert(countrySelect.val());
         $.ajax({
-          url: 'tours/search_tours',
+          url: '/get_region',
           type: 'POST',
           data: {
-            city: $('#edit-city').val(),
-            country: $('#edit-country-to').val(),
-            date_of: $('#edit-date-of-datepicker-popup-0').val(),
-            date_to: $('#edit-date-to-datepicker-popup-0').val()
+            country_to: countrySelect.val()
           },
           success: function(response) {
-              var $content_tours = $('#content_tours');
-              $comment_rating.html(response)
+            alert(response);
           },
           error: function(response) {
             alert('false');
           }
         });
+        /*$.getJSON('/tours/get_region', { country_to: countrySelect.val() }, function(regionList) {
+         alert('ok');
+          regionSelect.html('');
+
+          $.each(regionList, function(i){
+            regionSelect.append('<option value="' + i + '">' + this + '</option>');
+          });
+        });*/
       });
-    }
-  };*/
+    })
+  };
 }(jQuery));

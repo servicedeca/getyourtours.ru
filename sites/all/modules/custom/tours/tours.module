@@ -13,25 +13,20 @@ function tours_menu() {
     'page callback' => 'tours_get_tours',
     'access callback' => TRUE,
   );
-  $item['tours/autocomplete'] = array(
-    'title' => 'Autocomplete',
-    'page callback' => 'tours_autocomplete',
-    'access callback' => TRUE,
-  );
-  $item['tours/autocomplete_to'] = array(
-    'title' => 'Autocomplete',
-    'page callback' => 'tours_autocomplete_to',
-    'access callback' => TRUE,
-  );
-  $item['tours/search_tours'] = array(
+  $item['search_tours'] = array(
     'title' => 'Search tour',
     'page callback' => 'tours_search_tours',
     'access callback' => TRUE,
   );
-  $item['tours/hotel/'] = array(
+  $item['hotel/%'] = array(
     'title' => 'Hotel',
     'page callback' => 'tours_hotel_tours',
-    //'page arguments' => array(3),
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+  $item['get_region'] = array(
+    'title' => 'region',
+    'page callback' => 'tours_get_region',
     'access callback' => TRUE,
   );
   return $item;
@@ -47,76 +42,123 @@ function tours_theme() {
       'template' => 'tours_search_form',
       'render element' => 'form',
     );
+  $items['tours_search_tours'] = array(
+    'template' => 'tours-search-tours',
+    'variables' => array(
+      'variables' => NULL,
+    ),
+  );
+  $items['tours_hotel_tours'] = array(
+    'template' => 'tours-hotel-tours',
+  );
+  $items['date_of_form'] = array(
+    'template' => 'date-of-form',
+  );
 
   return $items;
+}
+
+/*
+ * page callback to /get_region.
+ */
+function tours_get_region() {
+ print $_POST['country_to'];
+  exit();
 }
 
 /**
  * Form builder for tour search form.
  */
 function tours_tour_search_form($form, $form_state) {
-
   $form['city'] = array(
-    '#type'	=> 'textfield',
+    '#type'	=> 'select',
     '#title' => t('City ​​of departure'),
     '#default_value' => $_GET['city'],
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#autocomplete_path' => 'tours/autocomplete',
+    '#options' => tours_get_city_country('cities'),
   );
 
   $form['country_to'] = array(
-    '#type'	=> 'textfield',
+    '#type'	=> 'select',
     '#title' => t('Country to'),
     '#default_value' => $_GET['country_to'],
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#autocomplete_path' => 'tours/autocomplete_to',
+    '#options' => tours_get_city_country('countries'),
+  );
+
+  $form['region'] = array(
+    '#type'	=> 'select',
+    '#title' => t('Region'),
+    '#default_value' => $_GET['region'],
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
   );
 
   $form['date_of'] = array(
     '#type' => 'date_popup',
     '#title' => t('Date of'),
     '#date_format' => 'd.m.Y',
+    '#default_value' => $_GET['date_of']['date'],
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#default_value' => $_GET['date_of']['date'],
   );
 
   $form['date_to'] = array(
     '#type' => 'date_popup',
     '#title' => t('Date to'),
     '#date_format' => 'd.m.Y',
+    '#default_value' => $_GET['date_of']['date'],
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#default_value' => $_GET['date_of']['date'],
   );
 
-  $options = array('none' => '<none>');
+  $adults = array('1' => 1,
+    '2' => 2,
+    '3' => 3,
+    '4' => 4);
 
-  $form['Accommodation'] = array(
+  $children = array('0' => 0,
+    '1' => 1,
+    '2' => 2);
+
+  $form['adults'] = array(
     '#type' => 'select',
-    '#title' => t('Accommodation'),
+    '#title' => t('Adults'),
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#options' => $options,
+    '#default_value' => $_GET['adults'],
+    '#options' => $adults,
+  );
+
+  $form['children'] = array(
+    '#type' => 'select',
+    '#title' => t('Children'),
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
+    '#default_value' => $_GET['children'],
+    '#options' => $children,
   );
 
   $form['search'] = array(
     '#type' => 'submit',
     '#value' => t('Search'),
     '#attributes' => array(
-      'class' => array('btn btn-default'),
+      'class' => array('btn btn-default sub'),
     ),
   );
 
   $form['#method'][] = 'GET';
   $form['#theme'][] = 'tours_search_form';
+  $form['#action'] = 'search_tours';
   return $form;
 }
 
@@ -141,18 +183,17 @@ function tours_get_data_operator() {
 /**
  * Autocomplete callback.
  */
-function tours_autocomplete($string) {
-  $result = tours_get_data_operator();
-  $data = $result->cities;
-  $matches = array();
-  if($string) {
-    foreach($data as $key => $value){
-      if(preg_match("/$string/i", $value->name)) {
-        $matches[$value->name] = $value->name;
-      }
+function tours_get_city_country($param) {
+  $result = tours_get_data_operator()->$param;
+  foreach($result as $key => $value) {
+    if($param == 'cities') {
+      $data[$value->cityId] = $value->name;
+    }
+    elseif($param == 'countries') {
+      $data[$value->countryId] = $value->name;
     }
   }
-  drupal_json_output($matches);
+  return $data;
 }
 
 /**
@@ -173,32 +214,29 @@ function tours_autocomplete_to($string) {
 }
 
 /*
- * Page callback tours/hotel
+ * Page callback /hotel
  */
 
-function tours_hotel_tours() {
-  $a = 1;
-  var_dump(tours_get_tours(2));
+function tours_hotel_tours($hotelId) {
+  return theme('tours_hotel_tours', array('hotelId' => $hotelId));
+}
+
+/*
+ * Page callback /search_tours
+ */
+function tours_search_tours() {
+  return theme('tours_search_tours', array());
 }
 
 /*
  * Page callback tours/show_tours.
  */
-function tours_get_tours($hotelId) {
+function tours_get_tours($hotelId = NULL) {
 
-  if($_GET['city'] && !empty($_GET['city']) ) {
-    $cities = tours_get_data_operator()->cities;
-    $countries = tours_get_data_operator()->countries;
-    foreach($cities as $value) {
-      if($value->name == $_GET['city']) {
-        $cityId = $value->cityId;
-      }
-    }
-    foreach($countries as $value) {
-      if($value->name == $_GET['country_to']) {
-        $countryId = $value->countryId;
-      }
-    }
+  if($_GET['city']) {
+    $cityId = $_GET['city'];
+    $countryId = $_GET['country_to'];;
+
     $data_directory = array(
       'xml' => 'false',
       'formatResult' => 'true'
@@ -210,6 +248,25 @@ function tours_get_tours($hotelId) {
     foreach($directory as $value) {
       if($value->arrCountry == $countryId && $value->depCity == $cityId ){
         $dynamics = 1;
+      }
+    }
+    $adults = $_GET['adults'];
+    $children = $_GET['children'];
+    if($dynamics == 1) {
+      $accommodations = 'http://www.tez-tour.com/tariffsearch/accommodations';
+    }
+    else{
+      $accommodations = 'http://www.tez-tour.com/toursearch/accommodations';
+    }
+    $accommodations_query = array(
+      'cityId' => $cityId,
+      'countryId' => $countryId,
+    );
+    $accommodations_url = url($accommodations, array('query' => $accommodations_query));
+    $accommodations_data = json_decode(drupal_http_request($accommodations_url)->data)->accommodations;
+    foreach($accommodations_data as $value) {
+      if($value->adult == $adults && $value->children == $children) {
+        $accommodationId = $value->accommodationId;
       }
     }
     $after = $_GET['date_of']['date'];
@@ -227,7 +284,7 @@ function tours_get_tours($hotelId) {
       'nightsMin' => '6',
       'nightsMax' => '14',
       'hotelClassId' => '2567',
-      'accommodationId' => '1',
+      'accommodationId' => $accommodationId,
       'rAndBId' => '15350',
       'tourType' => '1',
       'locale' => 'ru',
@@ -248,6 +305,13 @@ function tours_get_tours($hotelId) {
       'salePrivateFlag' => 'false',
       'onlineConfirmFlag' => 'false',
     );
+    if ($children == 1) {
+      $data['birthday1'] = '17.10.2009';
+    }
+    elseif($children == 2) {
+      $data['birthday1'] = '17.10.2009';
+      $data['birthday2'] = '17.10.2009';
+    }
     $full_url = url($url, array('query' => $data));
     $result = drupal_http_request($full_url);
     return array(

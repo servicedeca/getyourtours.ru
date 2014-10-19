@@ -1,7 +1,13 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: vladimir
- * Date: 15.10.14
- * Time: 18:46
- */ 
+<?php if($tours): ?>
+  <?php foreach($tours as $tour): ?>
+    <?php print $tour['date_of']. '<br>'; ?>
+    <?php print $tour['date_to']. '<br>'; ?>
+    <?php print $tour['night'] .'<br>'; ?>
+    <?php print $tour['city'] .'<br>'; ?>
+    <?php print $tour['hotel'] .'<br>'; ?>
+    <?php print $tour['image'] .'<br>'; ?>
+    <?php print $tour['currency']; ?>
+    <?php print $tour['price'] .'<br>'; ?>
+    <?php print $tour['food'].'<br></br><br></br>'; ?>
+  <?php endforeach ?>
+<?php endif?>
