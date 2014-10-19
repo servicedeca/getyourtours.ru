@@ -59,10 +59,46 @@ function tours_theme() {
 }
 
 /*
+ * Checking for dynamic pricing
+ */
+
+function tours_checking_dynamic($countryId, $cityId) {
+  $directory_url = 'http://search.tez-tour.com/toursearch/getCalcTypes';
+  $data_directory = array(
+    'xml' => 'false',
+    'formatResult' => 'true'
+  );
+  $url = url($directory_url, array('query' => $data_directory));
+  $directory = drupal_http_request($url);
+  $directory = json_decode($directory->data)->calcByTariffs;
+  foreach($directory as $value) {
+    if($value->arrCountry == $countryId && $value->depCity == $cityId ){
+      $dynamics = 1;
+    }
+  }
+   return $dynamics == 1 ? TRUE : FALSE;
+}
+
+/*
  * page callback to /get_region.
  */
 function tours_get_region() {
- print $_POST['country_to'];
+  if (tours_checking_dynamic($_POST['country_to'], $_POST['city']) != TRUE ) {
+    $url = url('http://search.tez-tour.com/toursearch/byCountry');
+  }
+  else {
+    $url = url('http://search.tez-tour.com/tariffsearch/byCountry');
+  }
+  $data = array(
+    'countryId' => $_POST['country_to'],
+    'locale' => 'ru',
+  );
+  $full_url = url($url, array('query' => $data));
+  $result = drupal_http_request($full_url);
+  $result = json_decode($result->data);
+  foreach($result->regions as $value) {
+    print "<option value=". $value->regionid . ">". $value->name ."</option>";
+  }
   exit();
 }
 
