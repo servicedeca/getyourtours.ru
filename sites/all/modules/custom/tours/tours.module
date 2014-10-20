@@ -155,33 +155,36 @@ function tours_tour_search_form($form, $form_state) {
     ),
   );
 
-  $adults = array('1' => 1,
-    '2' => 2,
-    '3' => 3,
-    '4' => 4);
-
-  $children = array('0' => 0,
-    '1' => 1,
-    '2' => 2);
-
   $form['adults'] = array(
-    '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Adults'),
+    '#value' => empty($_GET['adults']) ? $_GET['adults'] = 1 : $_GET['adults'],
     '#attributes' => array(
-      'class' => array('form-control'),
+      'id' => array('tours-count-adults'),
     ),
-    '#default_value' => $_GET['adults'],
-    '#options' => $adults,
   );
 
   $form['children'] = array(
-    '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Children'),
+    '#value' => $_GET['children'],
+    '#attributes' => array(
+      'id' => array('tours-count-children'),
+    ),
+  );
+  $form['children_date_one'] = array(
+    '#type' => 'textfield',
     '#attributes' => array(
       'class' => array('form-control'),
+      'id' => array('children-date-one'),
     ),
-    '#default_value' => $_GET['children'],
-    '#options' => $children,
+  );
+  $form['children_date_two'] = array(
+    '#type' => 'textfield',
+    '#attributes' => array(
+      'class' => array('form-control'),
+      'id' => array('children-date-two'),
+    ),
   );
 
   $form['search'] = array(
@@ -273,22 +276,7 @@ function tours_get_tours($hotelId = NULL) {
     $cityId = $_GET['city'];
     $countryId = $_GET['country_to'];;
 
-    $data_directory = array(
-      'xml' => 'false',
-      'formatResult' => 'true'
-    );
-    $directory_url = 'http://search.tez-tour.com/toursearch/getCalcTypes';
-    $url = url($directory_url, array('query' => $data_directory));
-    $directory = drupal_http_request($url);
-    $directory = json_decode($directory->data)->calcByTariffs;
-    foreach($directory as $value) {
-      if($value->arrCountry == $countryId && $value->depCity == $cityId ){
-        $dynamics = 1;
-      }
-    }
-    $adults = $_GET['adults'];
-    $children = $_GET['children'];
-    if($dynamics == 1) {
+    if (tours_checking_dynamic($cityId, $countryId) != TRUE ) {
       $accommodations = 'http://www.tez-tour.com/tariffsearch/accommodations';
     }
     else{
@@ -298,6 +286,8 @@ function tours_get_tours($hotelId = NULL) {
       'cityId' => $cityId,
       'countryId' => $countryId,
     );
+    $adults = $_GET['adults'];
+    $children = $_GET['children'];
     $accommodations_url = url($accommodations, array('query' => $accommodations_query));
     $accommodations_data = json_decode(drupal_http_request($accommodations_url)->data)->accommodations;
     foreach($accommodations_data as $value) {
@@ -307,11 +297,13 @@ function tours_get_tours($hotelId = NULL) {
     }
     $after = $_GET['date_of']['date'];
     $before = $_GET['date_to']['date'];
-    if($dynamics == 1){
+    if (tours_checking_dynamic($cityId, $countryId) != TRUE ) {
       $url = 'http://www.tez-tour.com/tariffsearch/getResult';
+      $dynamics = 1;
     }
     else{
       $url = 'http://www.tez-tour.com/toursearch/getResult';
+      $dynamics = NULL;
     }
     $data = array(
       'priceMin' => '0',
@@ -351,8 +343,8 @@ function tours_get_tours($hotelId = NULL) {
     $full_url = url($url, array('query' => $data));
     $result = drupal_http_request($full_url);
     return array(
-     'tours' => json_decode($result->data)->data,
-     'dynamics' => $dynamics,
+      'tours' => json_decode($result->data)->data,
+      'dynamics' => $dynamics,
     );
   }
   return false;

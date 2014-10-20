@@ -1,3 +1,41 @@
 .content {
   margin-top:50px ;
 }
+
+.item-count-adults {
+  display: inline-block;
+  margin: 0;
+  background: url('../images/people.png') 4px 1px no-repeat;
+  cursor: pointer;
+  float: left;
+  margin: 0 1px 0 0;
+  height: 41px;
+  width: 19px;
+}
+
+.item-count-adults.light {
+  background: url('../images/people-active.png') 4px 1px no-repeat;
+}
+
+.item-count-children {
+  display: inline-block;
+  margin: 0;
+  background: url('../images/kid.png') 4px 1px no-repeat;
+  cursor: pointer;
+  float: left;
+  margin: 0 1px 0 0;
+  height: 41px;
+  width: 19px;
+}
+
+.item-count-children.light {
+  background: url('../images/kid-active.png') 4px 1px no-repeat;
+}
+
+#children-date-one {
+  display: none;
+}
+
+#children-date-two {
+  display: none;
+}

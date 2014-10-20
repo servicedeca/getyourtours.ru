@@ -133,5 +133,7 @@ function tours_preprocess_tours_search_form(&$vars) {
   $vars['children'] = $vars['form']['children'];
   $vars['adults'] = $vars['form']['adults'];
   $vars['search'] = $vars['form']['search'];
+  $vars['date_one'] = $vars['form']['children_date_one'];
+  $vars['date_two'] = $vars['form']['children_date_two'];
 
 }
