@@ -8,8 +8,9 @@ stylesheets[all][] = css/bootstrap.css.map
 stylesheets[all][] = css/bootstrap-theme.css
 stylesheets[all][] = css/bootstrap-theme.css.map
 stylesheets[all][] = css/bootstrap-theme.min.css
+stylesheets[all][] = css/chosen.css
 stylesheets[all][] = css/tours_theme.css
 
-scripts[] = js/tours_theme.js
-scripts[] = js/bootstrap.min.js.js
+scripts[] = js/bootstrap.min.js
+scripts[] = js/chosen.jquery.min.js
 scripts[] = js/tours_theme.js

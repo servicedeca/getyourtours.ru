@@ -32,6 +32,7 @@ function tours_preprocess_tours_search_tours(&$vars) {
         'date_to' => $tour[5],
         'night' => $tour[4],
         'city' => $tour[11],
+        'type_room' => $tour[8],
         'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $_GET)),
         'food' => $tour[14],
         'image' => theme('image', array(
@@ -53,6 +54,7 @@ function tours_preprocess_tours_search_tours(&$vars) {
         'date_to' => $tour[4],
         'night' => $tour[3],
         'city' => $tour[5][0],
+        'type_room' => $tour[8],
         'hotel' => l($tour[6][1],'hotel/' .$tour[6][3], array('query' => $_GET)),
         'food' => $tour[7][1],
         'image' => theme('image', array(
@@ -81,12 +83,12 @@ function tours_preprocess_tours_hotel_tours(&$vars) {
         'date_to' => $tour[5],
         'night' => $tour[4],
         'city' => $tour[11],
-        'hotel' => l($tour[6],'hotel/' ),
+        'hotel' => $tour[6],
         'food' => $tour[14],
         'image' => theme('image', array(
           'path' => $tour[38],
-          'width' => '150px',
-          'height' => '150px',
+          'width' => '300px',
+          'height' => '300px',
           'alt' => $tour[6],
           'title' => $tour[6],
         )),
@@ -102,12 +104,12 @@ function tours_preprocess_tours_hotel_tours(&$vars) {
         'date_to' => $tour[4],
         'night' => $tour[3],
         'city' => $tour[5][0],
-        'hotel' => l($tour[6][1],'hotel/'),
+        'hotel' => $tour[6][1],
         'food' => $tour[7][1],
         'image' => theme('image', array(
           'path' => $tour[6][2],
-          'width' => '150px',
-          'height' => '150px',
+          'width' => '300px',
+          'height' => '300px',
           'alt' => $tour[6][1],
           'title' => $tour[6][1],
         )),
@@ -127,13 +129,18 @@ function tours_preprocess_tours_search_form(&$vars) {
   $vars['form']['#attributes']['class'][] = 'form-inline';
   $vars['city'] = $vars['form']['city'];
   $vars['country_to'] = $vars['form']['country_to'];
-  $vars['region'] = $vars['form']['region'];
+  $vars['tourId'] = $vars['form']['tourId'];
+  $vars['hotelId'] = $vars['form']['hotelId'];
   $vars['date_of'] = $vars['form']['date_of'];
   $vars['date_to'] = $vars['form']['date_to'];
   $vars['children'] = $vars['form']['children'];
   $vars['adults'] = $vars['form']['adults'];
   $vars['search'] = $vars['form']['search'];
-  $vars['date_one'] = $vars['form']['children_date_one'];
-  $vars['date_two'] = $vars['form']['children_date_two'];
+  $vars['birthday1'] = $vars['form']['birthday1'];
+  $vars['birthday2'] = $vars['form']['birthday2'];
+  $vars['nightsMin'] = $vars['form']['nightsMin'];
+  $vars['nightsMax'] = $vars['form']['nightsMax'];
+  $vars['priceMin'] = $vars['form']['priceMin'];
+  $vars['priceMax'] = $vars['form']['priceMax'];
 
 }

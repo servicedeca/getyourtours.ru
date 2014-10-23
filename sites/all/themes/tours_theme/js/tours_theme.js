@@ -1,8 +1,14 @@
 (function ($) {
   Drupal.behaviors.toursSelectregion = {
     attach: $(function () {
+      $(document).ready(function () {
+        region_select();
+      });
       $("#edit-country-to").change(function () {
-        var regionSelect = $('select[name="region"]');
+        region_select();
+      });
+      function region_select(){
+        var regionSelect = $('select[name="tourId"]');
         var countrySelect = $('select[name="country_to"]');
         var citySelect = $('select[name="city"]');
         $.ajax({
@@ -20,7 +26,42 @@
             alert('false');
           }
         });
+      }
+    })
+  };
+
+  Drupal.behaviors.toursSelecthotel = {
+    attach: $(function () {
+      $(document).ready(function () {
+        hotel_select();
+
       });
+      $("#edit-country-to").change(function () {
+        hotel_select();
+      });
+      function hotel_select(){
+        var hotelSelect = $('select[name="hotelId"]');
+        var regionSelect = $('select[name="tourId"]');
+        var countrySelect = $('select[name="country_to"]');
+        var citySelect = $('select[name="city"]');
+       // alert('ok');
+        $.ajax({
+          url: '/get_hotel',
+          type: 'POST',
+          data: {
+            country_to: countrySelect.val(),
+            city: citySelect.val(),
+            region: regionSelect.val()
+          },
+          success: function(response) {
+            hotelSelect.html('');
+            hotelSelect.append(response);
+          },
+          error: function(response) {
+            alert('false');
+          }
+        });
+      }
     })
   };
 
@@ -60,6 +101,12 @@ Drupal.behaviors.toursAddChildren = {
       $('#children-'+i).removeClass('light');
       $('#children-'+i).addClass('light');
     }
+    if($('#children-1').attr('class') == 'form-children item-count-children light') {
+      $("#children-birthday1").show();
+    }
+    if($('#children-2').attr('class') == 'form-children item-count-children light') {
+      $("#children-birthday2").show();
+    }
 
     $(".form-children").click(function() {
       var id = $(this).attr('id');
@@ -67,23 +114,43 @@ Drupal.behaviors.toursAddChildren = {
       $("#tours-count-children").val(id_next-1);
       if($('#children-'+id_next).attr('class') == 'form-children item-count-children' && $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children light') {
         $(this).removeClass('light');
-        $("#children-date-one").hide()
-      }
-      else{
-      if($('#children-'+id_next).attr('class') == 'form-children item-count-children light') {
-        for (i=id_next; i<=2; i++) {
-          $('#children-'+i).removeClass('light');
-          $("#children-date-two").hide()
-        }
       }
       else {
-        for (i=1; i<=id_next-1; i++) {
-          $('#children-'+i).addClass('light');
-          $("#children-date-two").show()
+        if($('#children-'+id_next).attr('class') == 'form-children item-count-children light') {
+          for (i=id_next; i<=2; i++) {
+            $('#children-'+i).removeClass('light');
+          }
+        }
+        else {
+          for (i=1; i<=id_next-1; i++) {
+            $('#children-'+i).addClass('light');
+          }
         }
       }
+      if($('#children-'+id_next-1).attr('class') == 'form-children item-count-children') {
+        $("#children-birthday1").hide();
+      }
+      else {
+        $("#children-birthday1").show();
+      }
+      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children') {
+        $("#children-birthday2").hide();
+      }
+      else {
+        $("#children-birthday2").show();
+      }
+      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children' && $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children') {
+        $("#children-birthday1").hide();
       }
     })
   })
 };
+
+  Drupal.behaviors.toursChosen = {
+    attach: $(document).ready(function(){
+      $(".chosen").chosen({allow_single_deselect:true});
+      //alert('ok');
+    })
+  };
+
 }(jQuery));

@@ -32,10 +32,26 @@
   background: url('../images/kid-active.png') 4px 1px no-repeat;
 }
 
-#children-date-one {
+#children-birthday1 {
   display: none;
 }
 
-#children-date-two {
+#children-birthday2 {
   display: none;
+}
+
+.form-item-birthday1{
+  width: 42px;
+}
+
+.form-item-birthday2 {
+  width: 42px;
+}
+
+.form-year-children {
+
+}
+
+.children-count {
+  float: left;
 }
