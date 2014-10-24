@@ -1,9 +1,8 @@
 (function ($) {
+
   Drupal.behaviors.toursSelectregion = {
     attach: $(function () {
-      $(document).ready(function () {
         region_select();
-      });
       $("#edit-country-to").change(function () {
         region_select();
       });
@@ -32,10 +31,7 @@
 
   Drupal.behaviors.toursSelecthotel = {
     attach: $(function () {
-      $(document).ready(function () {
         hotel_select();
-
-      });
       $("#edit-country-to").change(function () {
         hotel_select();
       });
@@ -66,7 +62,7 @@
   };
 
   Drupal.behaviors.toursAddAdults = {
-    attach: $(document).ready(function(){
+    attach: $(function(){
       var count_adults = parseInt($("#tours-count-adults").val().replace(/\D+/g,""));
       for (i=1; i<=count_adults; i++) {
         $('#adults-'+i).removeClass('light, active');
@@ -95,7 +91,7 @@
   };
 
 Drupal.behaviors.toursAddChildren = {
-  attach: $(document).ready(function(){
+  attach: $(function(){
    var count_children = parseInt($("#tours-count-children").val().replace(/\D+/g,""));
     for (i=1; i<=count_children; i++) {
       $('#children-'+i).removeClass('light');
@@ -147,7 +143,7 @@ Drupal.behaviors.toursAddChildren = {
 };
 
   Drupal.behaviors.toursChosen = {
-    attach: $(document).ready(function(){
+    attach: $(function(){
       $(".chosen").chosen({allow_single_deselect:true});
       //alert('ok');
     })

@@ -57,10 +57,16 @@
   <div class="col-lg-1">
     <?php print render($priceMax); ?>
   </div>
-  <div class="col-lg-12">
-      <?php print render($search);?>
+  <div class="col-lg-2">
+    <?php print render($rAndBId); ?>
   </div>
   <div class="col-lg-2">
     <?php print render($hotelId);?>
+  </div>
+  <div class="col-lg-2">
+   <?php print render($hotelClassId); ?>
+  </div>
+  <div class="col-lg-12">
+    <?php print render($search);?>
   </div>
 </div>

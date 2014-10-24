@@ -111,6 +111,33 @@ function tours_get_region() {
   exit();
 }
 
+function tours_test_search() {
+  $country = tours_get_data_operator('countries');
+  foreach ($country as $id => $val) {
+    if (tours_checking_dynamic($id, '2190') == TRUE ) {
+      $url = url('http://search.tez-tour.com/tariffsearch/byCountry');
+    }
+    else {
+      $url = url('http://search.tez-tour.com/toursearch/byCountry');
+    }
+    $query = array(
+      'countryId' => $id,
+      'locale' => 'ru',
+    );
+    $full_url = url($url, array('query' => $query));
+    $data = drupal_http_request($full_url);
+    $result['region'] = json_decode($data->data)->tours;
+    $result['hotel'] = json_decode($data->data)->hotels;
+    foreach($result as $res) {
+      foreach($res as $value) {
+        $data_tour[] = $value->name;
+      }
+    }
+  }
+  return $data_tour;
+}
+
+$a = tours_test_search();
 /*
  * page callback to /get_hotel.
  */
@@ -128,10 +155,9 @@ function tours_get_hotel() {
   $full_url = url($url, array('query' => $data));
   $result = drupal_http_request($full_url);
   $result = json_decode($result->data);
+  print "<option value=0>". t('not important') ."</option>";
   foreach($result->hotels as $value) {
-    //if($_POST['region'] == $value->tourId) {
       print "<option value=". $value->hotelId .">". $value->name ."</option>";
-    //}
   }
   exit();
 }
@@ -147,7 +173,7 @@ function tours_tour_search_form($form, $form_state) {
     '#attributes' => array(
       'class' => array('form-control', 'chosen'),
     ),
-    '#options' => tours_get_city_country('cities'),
+    '#options' => tours_get_data_operator('cities'),
   );
 
   $form['country_to'] = array(
@@ -157,7 +183,7 @@ function tours_tour_search_form($form, $form_state) {
     '#attributes' => array(
       'class' => array('form-control'),
     ),
-    '#options' => tours_get_city_country('countries'),
+    '#options' => tours_get_data_operator('countries'),
   );
 
   $form['tourId'] = array(
@@ -178,11 +204,33 @@ function tours_tour_search_form($form, $form_state) {
     ),
   );
 
+  $form['hotelClassId'] = array(
+    '#type'	=> 'select',
+    '#title' => t('Hotel Class'),
+    '#default_value' => $_GET['hotelId'],
+    '#options' => tours_get_data_operator('hotelClasses'),
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
+  );
+
+  $form['rAndBId'] = array(
+    '#type'	=> 'select',
+    '#title' => t('Food'),
+    '#default_value' => $_GET['rAndBId'],
+    '#options' => tours_get_data_operator('rAndBs'),
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
+  );
+
   $form['date_of'] = array(
-    '#type' => 'date_popup',
     '#title' => t('Date of'),
-    '#date_format' => 'd.m.Y',
-    '#default_value' => $_GET['date_of']['date'],
+    '#type' => 'date_popup',
+    '#default_value' => date('Y-m-d'),
+    '#date_format' => 'Y-m-d',
+    '#date_year_range' => '-0:+1',
+    '#date_label_position' => 'within',
     '#attributes' => array(
       'class' => array('form-control'),
     ),
@@ -288,32 +336,30 @@ function tours_tour_search_form($form, $form_state) {
 /*
  *  Get data from the operator
  */
-
-function tours_get_data_operator() {
+function tours_get_data_operator($param=NULL) {
   $url = 'http://search.tez-tour.com/toursearch/references';
-  $data = array(
+  $query = array(
     'locale' => 'ru',
     'formatResult' => 'true',
     'xml' => 'false',
   );
-  $full_url = url($url, array('query' => $data));
+  $full_url = url($url, array('query' => $query));
   $result = drupal_http_request($full_url);
-  $result = json_decode($result->data);
-
-  return $result;
-}
-
-/**
- * Autocomplete callback.
- */
-function tours_get_city_country($param) {
-  $result = tours_get_data_operator()->$param;
-  foreach($result as $key => $value) {
-    if($param == 'cities') {
-      $data[$value->cityId] = $value->name;
-    }
-    elseif($param == 'countries') {
-      $data[$value->countryId] = $value->name;
+  $result = json_decode($result->data)->$param;
+  foreach($result as $value) {
+    switch($param){
+      case 'cities':
+        $data[$value->cityId] = $value->name;
+        break;
+      case 'countries':
+        $data[$value->countryId] = $value->name;
+        break;
+      case 'hotelClasses':
+        $data[$value->classId] = $value->name;
+        break;
+      case 'rAndBs':
+        $data[$value->rAndBId] = $value->name;
+        break;
     }
   }
   return $data;
@@ -323,8 +369,7 @@ function tours_get_city_country($param) {
  * Autocomplete_to callback.
  */
 function tours_autocomplete_to($string) {
-  $result = tours_get_data_operator();
-  $data = $result->countries;
+  $data = tours_get_data_operator('countries');
   $matches = array();
   if($string) {
     foreach($data as $value){
@@ -393,9 +438,7 @@ function tours_get_tours($hotelId = NULL) {
       'currency' => '5561',
       'nightsMin' => '6',
       'nightsMax' => '14',
-      'hotelClassId' => '2567',
       'accommodationId' => $accommodationId,
-      'rAndBId' => '15350',
       'tourType' => '1',
       'locale' => 'ru',
       'cityId' => $cityId,
@@ -417,10 +460,20 @@ function tours_get_tours($hotelId = NULL) {
     );
     isset($_GET['priceMin']) ? $data['priceMin'] = $_GET['priceMin'] : $data['priceMin'] = '0';
     isset($_GET['priceMax']) ? $data['priceMax'] = $_GET['priceMax'] : $data['priceMax'] = '150000';
+    isset($_GET['hotelClassId']) ? $data['hotelClassId'] = $_GET['hotelClassId'] : $data['hotelClassId'] = '70486';
     isset($_GET['nightsMin']) ? $data['nightsMin'] = $_GET['nightsMin'] : $data['nightsMin'] = '6';
     isset($_GET['nightsMax']) ? $data['nightsMax'] = $_GET['nightsMax'] : $data['nightsMax'] = '14';
     isset($_GET['tourId']) ? $data['tourId'] = $_GET['tourId'] : $_GET['tourId'] = NULL;
-
+    isset($_GET['rAndBId']) ? $data['rAndBId'] = $_GET['rAndBId'] : $_GET['rAndBId'] = '2424';
+    if( current_path() == 'hotel/%') {
+      $data['hotelId'] = $hotelId;
+    }
+    elseif($_GET['hotelId'] == 0 && current_path() != 'hotel/%') {
+      $data['hotelId'] = NULL;
+    }
+    else{
+      $data['hotelId'] = $_GET['hotelId'];
+    }
     if($children == 1) {
       $data['birthday1'] = date('d.m.').(date('Y') - $_GET['birthday1']);
     }

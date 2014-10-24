@@ -10,4 +10,7 @@
     <?php print $tour['price'] .'<br>'; ?>
     <?php print $tour['food'].'<br></br><br></br>'; ?>
   <?php endforeach ?>
-<?php endif?>
+<?php endif ?>
+<?php if($massage):?>
+  <?php print $massage?>
+<?php endif ?>
