@@ -13,4 +13,5 @@ stylesheets[all][] = css/tours_theme.css
 
 scripts[] = js/bootstrap.min.js
 scripts[] = js/chosen.jquery.min.js
+scripts[] = js/slimmenu.js
 scripts[] = js/tours_theme.js

@@ -4,6 +4,8 @@
  * Process variables for page.tpl.php.
  */
 function tours_theme_preprocess_page(&$vars) {
+  global $user;
+
   // Get site logo.
   $vars['logo'] = theme('image', array(
     'path' => theme_get_setting('logo_path'),
@@ -11,13 +13,33 @@ function tours_theme_preprocess_page(&$vars) {
     'title' => t(variable_get('site_name')),
   ));
 
+// Get main menu.
+  $main_menu = i18n_menu_translated_tree('main-menu');
+  foreach ($main_menu as &$item) {
+    if (empty($item['#href'])) {
+      continue;
+    }
+    $item['#attributes']['class'][] = 'slimmenu-sub-menu';
+  }
+  $main_menu[351]['#attributes']['class']= 'active slimmenu-sub-menu';
+  $vars['main_menu'] = $main_menu;
+
+  // Get user links.
+  if (user_is_logged_in()) {
+     $vars['login_profile'] = l(t('User profile'), "user/$user->uid");
+     $vars['logout_register'] = l(t('Logout'), 'user/logout');
+  }
+  else {
+      $vars['Login_profile'] =  l(t('Login'), 'user/login');
+      $vars['logout_register'] = l(t('Register'), 'user/register');
+  }
+
   $vars['search_form'] = drupal_get_form('tours_tour_search_form');
   unset($vars['search_form']['date_of']['date']['#description']);
   unset($vars['search_form']['date_to']['date']['#description']);
   unset($vars['search_form']['date_of']['date']['#title']);
   unset($vars['search_form']['date_to']['date']['#title']);
 }
-
 
 /**
  * Process variables for tours_search_form.tpl.php.

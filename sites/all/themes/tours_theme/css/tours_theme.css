@@ -1,3 +1,147 @@
+body {
+  color: #737373;
+  font-family: 'Open Sans', Tahoma, Arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+li a:hover {
+  color: #c96810;
+  text-decoration: none;
+}
+
+.global-wrap {
+  background: #fff;
+  height: 100%;
+}
+
+header#main-header {
+  border-bottom: 2px solid #ed8323;
+}
+
+.header-top {
+  padding: 10px 0;
+  max-height: 60px;
+  background: #4d4d4d;
+}
+
+.top-user-area {
+  font-size: 12px;
+  position: relative;
+}
+
+.top-user-area .top-user-area-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-center {
+  display: table;
+  margin: 0 auto;
+}
+
+.list-inline-block > li {
+  display: inline-block;
+}
+
+.list-horizontal > li,
+.list-inline > li {
+  float: left;
+  margin-right: 10px;
+  padding: 0;
+  display: block;
+}
+
+.list-horizontal > li:last-child,
+.list-inline > li:last-child {
+  margin-right: 0;
+}
+
+.list-horizontal.list-border > li,
+.list-inline.list-border > li {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(0,0,0,0.13);
+}
+
+.list-horizontal.list-border > li:last-child,
+.list-inline.list-border > li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border: none;
+}
+
+.list-horizontal:after,
+.list-inline:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.top-user-area .top-user-area-list > li > a {
+  color: #f2f2f2;
+}
+
+.top-user-area > li > a :hover {
+  color: #c96810;
+  text-decoration: none;
+}
+
+.top-user-area > ul >li {
+  line-height: 40px;
+}
+
+.list-horizontal > li, .list-inline > li {
+  float: left;
+  margin-right: 10px;
+  padding: 0;
+  display: block;
+}
+
+.top-user-area {
+  font-size: 12px;
+  position: relative;
+}
+
+::selection {
+  background: #ed8323;
+  color: #fff;
+}
+
+ul.slimmenu {
+  list-style: none;
+  margin: 0;
+  margin-top: 6px;
+  height: 34px;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+ul.slimmenu li {
+  position: relative;
+  display: inline-block;
+}
+
+ul.slimmenu li.active > a, ul.slimmenu li:hover > a {
+  background: #ed8323;
+  color: #fff;
+}
+
+ul.slimmenu li.slimmenu-sub-menu a {
+  padding: 12px 34px 12px 20px;
+}
+
 .content {
   margin-top:50px ;
 }

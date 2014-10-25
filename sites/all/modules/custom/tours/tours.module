@@ -111,7 +111,7 @@ function tours_get_region() {
   exit();
 }
 
-function tours_test_search() {
+/*function tours_test_search() {
   $country = tours_get_data_operator('countries');
   foreach ($country as $id => $val) {
     if (tours_checking_dynamic($id, '2190') == TRUE ) {
@@ -137,7 +137,7 @@ function tours_test_search() {
   return $data_tour;
 }
 
-$a = tours_test_search();
+$a = tours_test_search();*/
 /*
  * page callback to /get_hotel.
  */
