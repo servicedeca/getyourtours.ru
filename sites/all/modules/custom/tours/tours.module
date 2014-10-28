@@ -55,11 +55,34 @@ function tours_theme() {
   $items['tours_hotel_tours'] = array(
     'template' => 'tours-hotel-tours',
   );
+  $items['tours_main_menu'] = array(
+    'template' => 'tours-main-menu',
+  );
   $items['date_of_form'] = array(
     'template' => 'date-of-form',
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function tours_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'panels') {
+    return "plugins/$plugin_type";
+  }
+
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return "plugins/content_types";
+  }
+}
+
+/**
+ * Draw main menu.
+ */
+function tours_main_menu() {
+  return theme('tours_main_menu');
 }
 
 /*
@@ -166,6 +189,15 @@ function tours_get_hotel() {
  * Form builder for tour search form.
  */
 function tours_tour_search_form($form, $form_state) {
+
+  $form['search'] = array(
+    '#type'	=> 'textfield',
+    '#attributes' => array(
+      'class' => array('typeahead form-control tt-hint'),
+      'style' => array('position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background-attachment: scroll; background-clip: border-box; background-color: rgba(255, 255, 255, 0.498039); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"')
+    ),
+  );
+
   $form['city'] = array(
     '#type'	=> 'select',
     '#title' => t('City ​​of departure'),
@@ -263,63 +295,56 @@ function tours_tour_search_form($form, $form_state) {
       'id' => array('tours-count-children'),
     ),
   );
+  $birthday = array(
+    '1' => '1',
+    '2' => '2',
+    '3' => '3',
+    '4' => '4',
+    '5' => '5',
+    '6' => '6',
+    '7' => '7',
+    '8' => '8',
+    '9' => '9',
+    '10' => '10',
+    '11' => '11',
+    '12' => '12',
+  );
   $form['birthday1'] = array(
-    '#type' => 'textfield',
-    '#maxlength' => '2',
+    '#type' => 'select',
     '#default_value' => $_GET['birthday1'],
+    '#options' => $birthday,
     '#attributes' => array(
       'class' => array('form-control'),
       'id' => array('children-birthday1'),
     ),
   );
   $form['birthday2'] = array(
-    '#type' => 'textfield',
-    '#maxlength' => '2',
+    '#type' => 'select',
+    '#options' => $birthday,
     '#default_value' => $_GET['birthday2'],
     '#attributes' => array(
       'class' => array('form-control'),
       'id' => array('children-birthday2'),
     ),
   );
-  $form['nightsMin'] = array(
-    '#type' => 'textfield',
-    '#title' => t('nightsMin'),
-    '#maxlength' => '2',
-    '#default_value' => $_GET['nightsMin'],
+
+  $form['nights'] = array(
+    '#type' => 'hidden',
+    '#title' => t('nights'),
     '#attributes' => array(
-      'class' => array('form-control'),
-    ),
-  );
-  $form['nightsMax'] = array(
-    '#type' => 'textfield',
-    '#title' => t('nightsMax'),
-    '#maxlength' => '2',
-    '#default_value' => $_GET['nightsMax'],
-    '#attributes' => array(
-      'class' => array('form-control'),
+      'class' => array('form-nights'),
     ),
   );
 
-  $form['priceMin'] = array(
-    '#type' => 'textfield',
-    '#title' => t('priceMin'),
-    '#maxlength' => '6',
-    '#default_value' => $_GET['priceMin'],
+  $form['price'] = array(
+    '#type' => 'hidden',
+    '#title' => t('price'),
     '#attributes' => array(
-      'class' => array('form-control'),
-    ),
-  );
-  $form['priceMax'] = array(
-    '#type' => 'textfield',
-    '#title' => t('priceMax'),
-    '#maxlength' => '6',
-    '#default_value' => $_GET['priceMax'],
-    '#attributes' => array(
-      'class' => array('form-control'),
+      'class' => array('form-price'),
     ),
   );
 
-  $form['search'] = array(
+  $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Search'),
     '#attributes' => array(

@@ -142,10 +142,30 @@ Drupal.behaviors.toursAddChildren = {
   })
 };
 
-  Drupal.behaviors.toursChosen = {
+  Drupal.behaviors.toursRangeSlider = {
     attach: $(function(){
-      $(".chosen").chosen({allow_single_deselect:true});
-      //alert('ok');
+      $(".form-nights").ionRangeSlider({
+        min: 6,
+        max: 30,
+        type: 'double',
+        prefix: "",
+        postfix: " Дней",
+        maxPostfix: "+",
+        prettify: false,
+        hasGrid: true,
+        gridMargin: 7
+      });
+      $(".form-price").ionRangeSlider({
+        min: 100,
+        max: 100000,
+        from: 30000,
+        to: 90000,
+        type: 'double',
+        step: 500,
+        postfix: " €",
+        hasGrid: true,
+        gridMargin: 15
+      });
     })
   };
 

@@ -13,17 +13,6 @@ function tours_theme_preprocess_page(&$vars) {
     'title' => t(variable_get('site_name')),
   ));
 
-// Get main menu.
-  $main_menu = i18n_menu_translated_tree('main-menu');
-  foreach ($main_menu as &$item) {
-    if (empty($item['#href'])) {
-      continue;
-    }
-    $item['#attributes']['class'][] = 'slimmenu-sub-menu';
-  }
-  $main_menu[351]['#attributes']['class']= 'active slimmenu-sub-menu';
-  $vars['main_menu'] = $main_menu;
-
   // Get user links.
   if (user_is_logged_in()) {
      $vars['login_profile'] = l(t('User profile'), "user/$user->uid");
@@ -147,12 +136,31 @@ function tours_preprocess_tours_hotel_tours(&$vars) {
   }
 }
 
+/**
+ * Process variables for excur-image-slider.tpl.php.
+ */
+function template_preprocess_tours_main_menu(&$vars) {
+  // Get main menu.
+  $main_menu = i18n_menu_translated_tree('main-menu');
+  foreach ($main_menu as &$item) {
+    if (empty($item['#href'])) {
+      continue;
+    }
+    $item['#attributes']['class'][] = 'slimmenu-sub-menu';
+  }
+  $main_menu[351]['#attributes']['class']= 'active slimmenu-sub-menu';
+  $vars['main_menu'] = $main_menu;
+}
 
 /**
  * Process variables for tours_search_form.tpl.php.
  */
 function tours_preprocess_tours_search_form(&$vars) {
 
+  unset($vars['form']['city']['#title']);
+  unset($vars['form']['date_of']['#title']);
+  unset($vars['form']['date_to']['#title']);
+  $vars['search'] = $vars['form']['search'];
   $vars['form']['#attributes']['class'][] = 'form-inline';
   $vars['city'] = $vars['form']['city'];
   $vars['country_to'] = $vars['form']['country_to'];
@@ -164,12 +172,9 @@ function tours_preprocess_tours_search_form(&$vars) {
   $vars['date_to'] = $vars['form']['date_to'];
   $vars['children'] = $vars['form']['children'];
   $vars['adults'] = $vars['form']['adults'];
-  $vars['search'] = $vars['form']['search'];
   $vars['birthday1'] = $vars['form']['birthday1'];
   $vars['birthday2'] = $vars['form']['birthday2'];
-  $vars['nightsMin'] = $vars['form']['nightsMin'];
-  $vars['nightsMax'] = $vars['form']['nightsMax'];
-  $vars['priceMin'] = $vars['form']['priceMin'];
-  $vars['priceMax'] = $vars['form']['priceMax'];
+  $vars['price'] = $vars['form']['price'];
+  $vars['nights'] = $vars['form']['nights'];
 
 }
