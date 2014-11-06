@@ -7,11 +7,17 @@ function tours_theme_preprocess_page(&$vars) {
   global $user;
 
   // Get site logo.
-  $vars['logo'] = theme('image', array(
+  $logo = theme('image', array(
     'path' => theme_get_setting('logo_path'),
     'alt' => t(variable_get('site_name')),
     'title' => t(variable_get('site_name')),
   ));
+  $vars['logo'] = l($logo, '<front>', array('query' => $_GET,
+    'html' => TRUE,));
+
+  // Get main menu.
+  $main_menu = i18n_menu_translated_tree('main-menu');
+  $vars['main_menu'] = $main_menu;
 
   // Get user links.
   if (user_is_logged_in()) {
@@ -24,10 +30,6 @@ function tours_theme_preprocess_page(&$vars) {
   }
 
   $vars['search_form'] = drupal_get_form('tours_tour_search_form');
-  unset($vars['search_form']['date_of']['date']['#description']);
-  unset($vars['search_form']['date_to']['date']['#description']);
-  unset($vars['search_form']['date_of']['date']['#title']);
-  unset($vars['search_form']['date_to']['date']['#title']);
 }
 
 /**
@@ -35,25 +37,31 @@ function tours_theme_preprocess_page(&$vars) {
  */
 function tours_preprocess_tours_search_tours(&$vars) {
   $tours = tours_get_tours();
-  unset($_GET['q']);
+  cache_set('tour',$tours);
+  $tours = cache_get('tour')->data;
+  $vars['res'] = $tours['result']->data;
   if (!empty($tours['tours'])) {
     if($tours['tours'] && $tours['dynamics'] == NULL) {
       foreach($tours['tours'] as $tour) {
+        $image = theme('image', array(
+          'path' => $tour[38],
+          'width' => '100%',
+          'height' => '197px',
+          'alt' => $tour[6],
+          'title' => $tour[6],
+        ));
         $vars['tours'][] = array(
           'date_of' => $tour[1],
           'date_to' => $tour[5],
           'night' => $tour[4],
           'city' => $tour[11],
           'type_room' => $tour[8],
-          'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $_GET)),
+          'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $_GET,
+                                                           'attributes' => array('class' => 'text-darken'))),
           'food' => $tour[14],
-          'image' => theme('image', array(
-            'path' => $tour[38],
-            'width' => '150px',
-            'height' => '150px',
-            'alt' => $tour[6],
-            'title' => $tour[6],
-          )),
+          'image' => l($image, 'hotel/' .$tour[46], array('query' => $_GET,
+                                                          'html' => TRUE,
+                                                            'attributes' => array('class' => 'hover-img'))),
           'currency' => $tour[40],
           'price' =>  $tour[39],
         );
@@ -61,21 +69,25 @@ function tours_preprocess_tours_search_tours(&$vars) {
     }
     elseif($tours['tours'] && $tours['dynamics'] == 1) {
       foreach($tours['tours'] as $tour) {
+        $image = theme('image', array(
+          'path' => $tour[6][2],
+          'width' => '100%',
+          'height' => '197px',
+          'alt' => $tour[6][1],
+          'title' => $tour[6][1],
+        ));
         $vars['tours'][] = array(
           'date_of' => $tour[0],
           'date_to' => $tour[4],
           'night' => $tour[3],
           'city' => $tour[5][0],
           'type_room' => $tour[8],
-          'hotel' => l($tour[6][1],'hotel/' .$tour[6][3], array('query' => $_GET)),
+          'hotel' => l($tour[6][1],'hotel/' .$tour[6][3], array('query' => $_GET,
+                                                                'attributes' => array('class' => 'text-darken'))),
           'food' => $tour[7][1],
-          'image' => theme('image', array(
-            'path' => $tour[6][2],
-            'width' => '150px',
-            'height' => '150px',
-            'alt' => $tour[6][1],
-            'title' => $tour[6][1],
-          )),
+          'image' => l($image, 'hotel/' .$tour[6][3], array('query' => $_GET,
+                                                            'html' => TRUE,
+                                                            'attributes' => array('class' => 'hover-img'))),
           'currency' => $tour[10]->currency,
           'price' =>  $tour[10]->total,
         );
@@ -156,18 +168,33 @@ function template_preprocess_tours_main_menu(&$vars) {
  * Process variables for tours_search_form.tpl.php.
  */
 function tours_preprocess_tours_search_form(&$vars) {
-
+  unset($vars['form']['date_of']['date']['#description']);
+  unset($vars['form']['date_to']['date']['#description']);
+  unset($vars['form']['date_of']['date']['#title']);
+  unset($vars['form']['date_to']['date']['#title']);
   unset($vars['form']['city']['#title']);
   unset($vars['form']['date_of']['#title']);
   unset($vars['form']['date_to']['#title']);
-  $vars['search'] = $vars['form']['search'];
+  unset($vars['form']['rAndBId']['#title']);
+  unset($vars['form']['hotelClassId']['#title']);
+  unset($vars['form']['country_to']['#title']);
+  unset($vars['form']['tourId']['#title']);
+  unset($vars['form']['hotelId']['#title']);
+  if(current_path() != 'search_tours') {
+    $vars['search'] = $vars['form']['search'];
+  }
   $vars['form']['#attributes']['class'][] = 'form-inline';
   $vars['city'] = $vars['form']['city'];
   $vars['country_to'] = $vars['form']['country_to'];
   $vars['tourId'] = $vars['form']['tourId'];
   $vars['hotelId'] = $vars['form']['hotelId'];
-  $vars['hotelClassId'] = $vars['form']['hotelClassId'];
-  $vars['rAndBId'] = $vars['form']['rAndBId'];
+  if(current_path() == 'search_tours') {
+    $vars['hotelClassId'] = $vars['form']['hotelClassId'];
+    $vars['rAndBId'] = $vars['form']['rAndBId'];
+    $vars['country'] = $vars['form']['country_to'];
+    $vars['tourId'] = $vars['form']['tourId'];
+    $vars['hotelId'] = $vars['form']['hotelId'];
+  }
   $vars['date_of'] = $vars['form']['date_of'];
   $vars['date_to'] = $vars['form']['date_to'];
   $vars['children'] = $vars['form']['children'];
@@ -176,5 +203,6 @@ function tours_preprocess_tours_search_form(&$vars) {
   $vars['birthday2'] = $vars['form']['birthday2'];
   $vars['price'] = $vars['form']['price'];
   $vars['nights'] = $vars['form']['nights'];
+  $vars['submit'] = $vars['form']['submit'];
 
 }

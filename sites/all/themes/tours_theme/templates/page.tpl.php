@@ -21,23 +21,14 @@
         </div>
       </div>
     </div>
-  </header>
-  <div id="content">
-    <?php print render($title_prefix); ?>
-    <?php print render($title_suffix); ?>
-    <?php if ($tabs): ?>
-      <div class="tabs">
-        <?php print render($tabs); ?>
+    <div class="container">
+      <div class="nav">
+        <ul class="slimmenu" id="slimmenu">
+          <?php print render($main_menu) ?>
+        </ul>
       </div>
-    <?php endif; ?>
-    <?php if (!empty($action_links)): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-    <?php endif; ?>
-    <?php print render($page['content']); ?>
-  </div>
-
+    </div>
+  </header>
   <div class="top-area show-onload">
     <div class="bg-holder full">
       <div class="bg-mask"></div>
@@ -56,6 +47,20 @@
       </div>
     </div>
   </div>
+  <div class="gap"></div>
+    <?php print render($title_prefix); ?>
+    <?php print render($title_suffix); ?>
+    <?php if ($tabs): ?>
+      <div class="tabs">
+        <?php print render($tabs); ?>
+      </div>
+    <?php endif; ?>
+    <?php if (!empty($action_links)): ?>
+      <ul class="action-links">
+        <?php print render($action_links); ?>
+      </ul>
+    <?php endif; ?>
+    <?php print render($page['content']); ?>
   <footer id="main-footer">
     <div class="container">
       <div class="row row-wrap">
@@ -64,5 +69,3 @@
     </div>
   </footer>
 </div>
-<?php //print render($search_form) ?>
-<?php //print render($page['content']); ?>

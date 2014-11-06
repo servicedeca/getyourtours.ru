@@ -2,7 +2,9 @@
 
   Drupal.behaviors.toursSelectregion = {
     attach: $(function () {
+      if( $('select[name="tourId"]') == null) {
         region_select();
+      }
       $("#edit-country-to").change(function () {
         region_select();
       });
@@ -29,9 +31,11 @@
     })
   };
 
-  Drupal.behaviors.toursSelecthotel = {
+   Drupal.behaviors.toursSelecthotel = {
     attach: $(function () {
+      if($('select[name="hotelId"]') == null) {
         hotel_select();
+      }
       $("#edit-country-to").change(function () {
         hotel_select();
       });
@@ -108,7 +112,8 @@ Drupal.behaviors.toursAddChildren = {
       var id = $(this).attr('id');
       var id_next = parseInt(id.replace(/\D+/g,""))+1;
       $("#tours-count-children").val(id_next-1);
-      if($('#children-'+id_next).attr('class') == 'form-children item-count-children' && $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children light') {
+      if($('#children-'+id_next).attr('class') == 'form-children item-count-children' &&
+        $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children light') {
         $(this).removeClass('light');
       }
       else {
@@ -124,19 +129,20 @@ Drupal.behaviors.toursAddChildren = {
         }
       }
       if($('#children-'+id_next-1).attr('class') == 'form-children item-count-children') {
-        $("#children-birthday1").hide();
+        document.getElementById('children-birthday1').disabled = true;
       }
       else {
-        $("#children-birthday1").show();
+        document.getElementById('children-birthday1').disabled = false;
       }
       if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children') {
-        $("#children-birthday2").hide();
+        document.getElementById('children-birthday2').disabled = true;
       }
       else {
-        $("#children-birthday2").show();
+        document.getElementById('children-birthday2').disabled = false;
       }
-      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children' && $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children') {
-        $("#children-birthday1").hide();
+      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children' &&
+        $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children') {
+        document.getElementById('children-birthday1').disabled = true;
       }
     })
   })
@@ -162,7 +168,7 @@ Drupal.behaviors.toursAddChildren = {
         to: 90000,
         type: 'double',
         step: 500,
-        postfix: " €",
+        postfix: " $",
         hasGrid: true,
         gridMargin: 15
       });
