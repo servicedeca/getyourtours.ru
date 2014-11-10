@@ -651,16 +651,20 @@ function tours_get_tours($hotelId = NULL) {
       'onlineConfirmFlag' => 'false',
     );
     if(isset($_GET['price'])) {
-     /* $data['priceMin'] = explode(";", $_GET['price'])[0];
-      $data['priceMax'] = explode(";", $_GET['price'])[1];*/
+      $pricemin = explode(";", $_GET['price']);
+      $pricemax = explode(";", $_GET['price']);
+      $data['priceMin'] = $pricemin[0];
+      $data['priceMax'] = $pricemax[1];
     }
     else {
       $data['priceMin'] =  '0';
       $data['priceMax'] = '15000';
     }
     if(isset($_GET['nights'])) {
-    /*  $data['nightsMin'] = explode(";", $_GET['nights'])[0];
-      $data['nightsMax'] = explode(";", $_GET['nights'])[1];*/
+      $nightsmin  = explode(";", $_GET['nights']);
+      $nightsmax  = explode(";", $_GET['nights']);
+      $data['nightsMin'] = $nightsmin[0];
+      $data['nightsMax'] = $nightsmax[1];
     }
     else {
       $data['nightsMin'] = '6';
