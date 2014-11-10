@@ -46,7 +46,7 @@
       <file leaf-file-name="tours.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="662" column="62" selection-start="17257" selection-end="17257" vertical-scroll-proportion="0.55069125" vertical-offset="9422" max-vertical-offset="10875">
+            <state line="666" column="41" selection-start="17371" selection-end="17371" vertical-scroll-proportion="0.56797236" vertical-offset="9467" max-vertical-offset="10935">
               <folding />
             </state>
           </provider>
@@ -831,7 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="662" column="62" selection-start="17257" selection-end="17257" vertical-scroll-proportion="0.55069125" vertical-offset="9422" max-vertical-offset="10875">
+        <state line="666" column="41" selection-start="17371" selection-end="17371" vertical-scroll-proportion="0.56797236" vertical-offset="9467" max-vertical-offset="10935">
           <folding />
         </state>
       </provider>
