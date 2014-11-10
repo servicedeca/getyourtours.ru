@@ -45,9 +45,9 @@ function tours_theme_preprocess_page(&$vars) {
  */
 function tours_preprocess_tours_search_tours(&$vars) {
   if(isset($_GET['search'])) {
-   // $tours = tours_get_tours();
-   // cache_set('tour',$tours);
-    $tours = cache_get('tour')->data;
+    $tours = tours_get_tours();
+    //cache_set('tour',$tours);
+    //$tours = cache_get('tour')->data;
     $vars['res'] = $tours['result']->data;
     $get_hotel = $_GET;
     unset($get_hotel['q']);
