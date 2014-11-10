@@ -119,6 +119,27 @@ ul.slimmenu li a {
   text-decoration: none;
 }
 
+footer#main-footer a,
+footer#main-footer h1,
+footer#main-footer h2,
+footer#main-footer h3,
+footer#main-footer h4,
+footer#main-footer h5 {
+  color: #fff;
+}
+
+.logo {
+  display: block;
+}
+
+footer#main-footer .logo {
+  margin-bottom: 15px;
+}
+
+footer#main-footer .logo {
+  margin-bottom: 15px;
+}
+
 .top-user-area > ul >li {
   line-height: 40px;
 }
@@ -203,6 +224,7 @@ footer#main-footer {
   color: #e6e6e6;
   font-size: 11px;
   line-height: 1.4em;
+  font-family: 'Open Sans', Tahoma, Arial, helvetica, sans-serif;
 }
 
 .top-area, .special-area {
@@ -491,11 +513,40 @@ label {
 
 .mb20 {
   margin-bottom: 20px !important;
-  padding-left: 15px;
+}
+
+footer#main-footer .form-control {
+  background: #121212;
+  border-color: #000;
+  color: #fff;
+}
+
+footer#main-footer a, footer#main-footer h1, footer#main-footer h2, footer#main-footer h3, footer#main-footer h4,  h5 {
+  color: #fff;
+}
+footer#main-footer h4 {
+  font-size: 23px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .row.row-wrap > [class^="col-"], .row.row-col-gap > [class^="col-"] {
   margin-bottom: 40px;
+}
+
+.list-footer > li {
+  margin-bottom: 5px;
+}
+
+* > small, small {
+  color: #818181;
+  font-size: 10px;
+  line-height: 1.4000000000000001em;
+}
+
+.mt5 {
+  margin-top: 5px !important;
+  margin-bottom: 10px;
 }
 
 .btn-primary {

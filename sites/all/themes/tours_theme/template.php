@@ -12,12 +12,19 @@ function tours_theme_preprocess_page(&$vars) {
     'alt' => t(variable_get('site_name')),
     'title' => t(variable_get('site_name')),
   ));
-  $vars['logo'] = l($logo, '<front>', array('query' => $_GET,
-    'html' => TRUE,));
+  $vars['logo'] = l($logo, '/<front>', array('query' => $_GET,
+    'html' => TRUE,
+    'attributes' => array('class' => 'logo',)));
 
   // Get main menu.
   $main_menu = i18n_menu_translated_tree('main-menu');
   $vars['main_menu'] = $main_menu;
+
+  // Get footer menu.
+  $footer_menu = menu_navigation_links('menu-footer-menu');
+  foreach ($footer_menu as $item) {
+    $vars['footer_menu'][] = l($item['title'], $item['href']);
+  }
 
   // Get user links.
   if (user_is_logged_in()) {
@@ -30,72 +37,77 @@ function tours_theme_preprocess_page(&$vars) {
   }
 
   $vars['search_form'] = drupal_get_form('tours_tour_search_form');
+  $vars['newsletter_form'] = drupal_get_form('tours_newsletter_form');
 }
 
 /**
  * Process variables for tours_search_form.tpl.php.
  */
 function tours_preprocess_tours_search_tours(&$vars) {
-  $tours = tours_get_tours();
-  cache_set('tour',$tours);
-  $tours = cache_get('tour')->data;
-  $vars['res'] = $tours['result']->data;
-  if (!empty($tours['tours'])) {
-    if($tours['tours'] && $tours['dynamics'] == NULL) {
-      foreach($tours['tours'] as $tour) {
-        $image = theme('image', array(
-          'path' => $tour[38],
-          'width' => '100%',
-          'height' => '197px',
-          'alt' => $tour[6],
-          'title' => $tour[6],
-        ));
-        $vars['tours'][] = array(
-          'date_of' => $tour[1],
-          'date_to' => $tour[5],
-          'night' => $tour[4],
-          'city' => $tour[11],
-          'type_room' => $tour[8],
-          'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $_GET,
-                                                           'attributes' => array('class' => 'text-darken'))),
-          'food' => $tour[14],
-          'image' => l($image, 'hotel/' .$tour[46], array('query' => $_GET,
-                                                          'html' => TRUE,
-                                                            'attributes' => array('class' => 'hover-img'))),
-          'currency' => $tour[40],
-          'price' =>  $tour[39],
-        );
-      }
-    }
-    elseif($tours['tours'] && $tours['dynamics'] == 1) {
-      foreach($tours['tours'] as $tour) {
-        $image = theme('image', array(
-          'path' => $tour[6][2],
-          'width' => '100%',
-          'height' => '197px',
-          'alt' => $tour[6][1],
-          'title' => $tour[6][1],
-        ));
-        $vars['tours'][] = array(
-          'date_of' => $tour[0],
-          'date_to' => $tour[4],
-          'night' => $tour[3],
-          'city' => $tour[5][0],
-          'type_room' => $tour[8],
-          'hotel' => l($tour[6][1],'hotel/' .$tour[6][3], array('query' => $_GET,
-                                                                'attributes' => array('class' => 'text-darken'))),
-          'food' => $tour[7][1],
-          'image' => l($image, 'hotel/' .$tour[6][3], array('query' => $_GET,
+  if(isset($_GET['search'])) {
+   // $tours = tours_get_tours();
+   // cache_set('tour',$tours);
+    $tours = cache_get('tour')->data;
+    $vars['res'] = $tours['result']->data;
+    $get_hotel = $_GET;
+    unset($get_hotel['q']);
+    if (!empty($tours['tours'])) {
+      if($tours['tours'] && $tours['dynamics'] == NULL) {
+        foreach($tours['tours'] as $tour) {
+          $image = theme('image', array(
+            'path' => $tour[38],
+            'width' => '100%',
+            'height' => '197px',
+            'alt' => $tour[6],
+            'title' => $tour[6],
+          ));
+          $vars['tours'][] = array(
+            'date_of' => $tour[1],
+            'date_to' => $tour[5],
+            'night' => $tour[4],
+            'city' => $tour[11],
+            'type_room' => $tour[8],
+            'hotel' => l($tour[6],'hotel/' .$tour[46], array('query' => $get_hotel,
+                                                             'attributes' => array('class' => 'text-darken'))),
+            'food' => $tour[14],
+            'image' => l($image, 'hotel/' .$tour[46], array('query' => $get_hotel,
                                                             'html' => TRUE,
-                                                            'attributes' => array('class' => 'hover-img'))),
-          'currency' => $tour[10]->currency,
-          'price' =>  $tour[10]->total,
-        );
+                                                              'attributes' => array('class' => 'hover-img'))),
+            'currency' => $tour[40],
+            'price' =>  $tour[39],
+          );
+        }
+      }
+      elseif($tours['tours'] && $tours['dynamics'] == 1) {
+        foreach($tours['tours'] as $tour) {
+          $image = theme('image', array(
+            'path' => $tour[6][2],
+            'width' => '100%',
+            'height' => '197px',
+            'alt' => $tour[6][1],
+            'title' => $tour[6][1],
+          ));
+          $vars['tours'][] = array(
+            'date_of' => $tour[0],
+            'date_to' => $tour[4],
+            'night' => $tour[3],
+            'city' => $tour[5][0],
+            'type_room' => $tour[8],
+            'hotel' => l($tour[6][1],'hotel/' .$tour[6][3], array('query' => $get_hotel,
+                                                                  'attributes' => array('class' => 'text-darken'))),
+            'food' => $tour[7][1],
+            'image' => l($image, 'hotel/' .$tour[6][3], array('query' => $get_hotel,
+                                                              'html' => TRUE,
+                                                              'attributes' => array('class' => 'hover-img'))),
+            'currency' => $tour[10]->currency,
+            'price' =>  $tour[10]->total,
+          );
+        }
       }
     }
-  }
-  else {
-    $vars['massage'] = 'Your search did not match';
+    else {
+      $vars['massage'] = 'Your search did not match';
+    }
   }
 }
 
@@ -205,4 +217,12 @@ function tours_preprocess_tours_search_form(&$vars) {
   $vars['nights'] = $vars['form']['nights'];
   $vars['submit'] = $vars['form']['submit'];
 
+}
+
+/**
+ * Process variables for tours-newsletter-form.tpl.php.
+ */
+function tours_preprocess_tours_newsletter_form(&$vars) {
+  $vars['newsletter'] = $vars['form']['newsletter'];
+  $vars['Subscribe'] = $vars['form']['Subscribe'];
 }

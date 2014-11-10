@@ -2,24 +2,203 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63de79ed-eb58-40fc-97b9-1b48743813d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/text_block.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/main_menu/main_menu.inc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-main-menu.tpl.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours_search_form.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/kid-active.png" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/kid-active.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/kid.png" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/kid.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/people-active.png" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/people-active.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/people.png" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/images/people.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/CHANGELOG.txt" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/CHANGELOG.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/README.txt" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.admin.inc" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.admin.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.api.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.inc" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.info" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.install" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.module" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/transliteration.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x00.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x00.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x01.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x01.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x02.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x02.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x03.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x03.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x04.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x04.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x05.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x05.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x06.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x06.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x07.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x07.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x09.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x09.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x0f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x10.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x10.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x11.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x11.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x12.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x12.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x13.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x13.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x14.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x14.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x15.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x15.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x16.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x16.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x17.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x17.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x18.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x18.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x1e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x1e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x1f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x1f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x20.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x20.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x21.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x21.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x22.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x22.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x23.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x23.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x24.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x24.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x25.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x25.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x26.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x26.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x27.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x27.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x28.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x28.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x2e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x2e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x2f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x2f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x30.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x30.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x31.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x31.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x32.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x32.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x33.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x33.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x4f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x50.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x50.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x51.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x51.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x52.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x52.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x53.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x53.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x54.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x54.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x55.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x55.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x56.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x56.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x57.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x57.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x58.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x58.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x59.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x59.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x5f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x60.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x60.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x61.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x61.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x62.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x62.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x63.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x63.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x64.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x64.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x65.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x65.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x66.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x66.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x67.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x67.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x68.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x68.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x69.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x69.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x6f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x70.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x70.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x71.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x71.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x72.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x72.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x73.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x73.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x74.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x74.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x75.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x75.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x76.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x76.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x77.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x77.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x78.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x78.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x79.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x79.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x7f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x80.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x80.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x81.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x81.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x82.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x82.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x83.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x83.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x84.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x84.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x85.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x85.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x86.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x86.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x87.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x87.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x88.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x88.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x89.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x89.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x8f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x90.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x90.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x91.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x91.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x92.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x92.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x93.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x93.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x94.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x94.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x95.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x95.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x96.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x96.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x97.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x97.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x98.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x98.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x99.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x99.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9a.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9b.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9b.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9c.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9c.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9d.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9e.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9e.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9f.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/x9f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa0.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa1.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa2.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa3.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa4.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xa4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xac.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xac.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xad.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xad.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xae.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xae.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xaf.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xaf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb0.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb1.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb2.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb3.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb4.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb5.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb6.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb7.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb8.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb9.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xb9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xba.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xba.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbb.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbc.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbd.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbe.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbf.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xbf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc0.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc1.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc2.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc3.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc4.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc5.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc6.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc7.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc8.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc9.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xc9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xca.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xca.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcb.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcc.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcd.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xce.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xce.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcf.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xcf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd0.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd0.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd1.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd2.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd3.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd4.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd5.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd6.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd7.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xd7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xf9.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xf9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfa.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfa.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfb.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfc.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfd.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfe.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xfe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xff.php" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/transliteration/data/xff.php" />
     </list>
     <ignored path="tours.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,16 +224,7 @@
       <file leaf-file-name="tours-hotel-tours.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-hotel-tours.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tours-search-form.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1575">
+            <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="-11.416667" vertical-offset="161" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
@@ -63,7 +233,7 @@
       <file leaf-file-name="tours_theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="1" selection-start="2156" selection-end="2156" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="8490">
+            <state line="226" column="65" selection-start="3879" selection-end="3879" vertical-scroll-proportion="-8.740741" vertical-offset="3154" max-vertical-offset="9255">
               <folding />
             </state>
           </provider>
@@ -72,8 +242,22 @@
       <file leaf-file-name="tours.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="29" selection-start="6705" selection-end="6705" vertical-scroll-proportion="-13.583333" vertical-offset="3604" max-vertical-offset="10410">
+            <state line="710" column="18" selection-start="18718" selection-end="18718" vertical-scroll-proportion="-10.458333" vertical-offset="10369" max-vertical-offset="10875">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours-newsletter-form.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+              <folding>
+                <marker date="1415430412801" expanded="true" signature="6:62" placeholder="..." />
+                <marker date="1415430412801" expanded="true" signature="112:137" placeholder="..." />
+                <marker date="1415430412801" expanded="true" signature="112:175" placeholder="..." />
+                <marker date="1415430412801" expanded="true" signature="120:137" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,17 +265,39 @@
       <file leaf-file-name="tours_theme.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="27" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2745">
+            <state line="34" column="27" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2745">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="40" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-1.6847575" vertical-offset="2074" max-vertical-offset="3210">
+            <state line="226" column="47" selection-start="7800" selection-end="7800" vertical-scroll-proportion="-15.041667" vertical-offset="3029" max-vertical-offset="3495">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="destinations.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="59" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.6666665" vertical-offset="41" max-vertical-offset="495">
+              <folding>
+                <element signature="e#6#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours_views.inc" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="15" selection-start="272" selection-end="272" vertical-scroll-proportion="0.4955947" vertical-offset="0" max-vertical-offset="454">
+              <folding>
+                <element signature="e#7#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,7 +305,7 @@
       <file leaf-file-name="tours-search-tours.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="85" selection-end="85" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="840">
+            <state line="46" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="-22.041666" vertical-offset="161" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -108,17 +314,15 @@
       <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="51" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tours-text-block.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="28" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="435">
-              <folding />
+            <state line="74" column="23" selection-start="2414" selection-end="2414" vertical-scroll-proportion="3.5833333" vertical-offset="1196" max-vertical-offset="1680">
+              <folding>
+                <marker date="1415427218857" expanded="true" signature="2807:2849" placeholder="..." />
+                <marker date="1415427218857" expanded="true" signature="2822:2849" placeholder="..." />
+                <marker date="1415427218857" expanded="true" signature="2919:2946" placeholder="..." />
+                <marker date="1415427218857" expanded="true" signature="2986:3053" placeholder="..." />
+                <marker date="1415427218857" expanded="true" signature="3030:3053" placeholder="..." />
+                <marker date="1415427218857" expanded="true" signature="3126:3153" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,17 +360,20 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/stock/stock.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/text_block.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_form/tours-search-form.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_form/search_form.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_block/tours-search-block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_block/search_block.inc" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc" />
       </list>
     </option>
   </component>
@@ -218,6 +425,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,36 +568,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours_theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -399,44 +577,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content_types" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,11 +604,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../excur" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Configurable.PHP.Debug" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -544,7 +683,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2790191" sideWeight="0.49920762" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28446865" sideWeight="0.49920762" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43876463" sideWeight="0.49972752" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2735695" sideWeight="0.5007924" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46645367" sideWeight="0.50027245" order="7" side_tool="true" content_ui="tabs" />
@@ -594,29 +733,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="544" />
+      <option name="time" value="564" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="498" selection-end="529" vertical-scroll-proportion="0.32163742" vertical-offset="0" max-vertical-offset="513" />
@@ -789,18 +909,6 @@
         <state line="44" column="18" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.84302324" vertical-offset="180" max-vertical-offset="825" />
       </provider>
     </entry>
-    <entry file="file:///usr/share/php/drush/drush.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.14910537" vertical-offset="0" max-vertical-offset="2625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-hotel-tours.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/theme.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1116" column="0" selection-start="43199" selection-end="43199" vertical-scroll-proportion="0.34851485" vertical-offset="16474" max-vertical-offset="43770">
@@ -808,37 +916,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="51" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/text_block.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="1" selection-start="817" selection-end="817" vertical-scroll-proportion="0.5889146" vertical-offset="0" max-vertical-offset="866" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="1" selection-start="2156" selection-end="2156" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="8490">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="435">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/bootstrap.inc">
@@ -855,6 +935,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="554" selection-end="643" vertical-scroll-proportion="0.5947136" vertical-offset="0" max-vertical-offset="454" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="27" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2745">
@@ -862,24 +947,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="226" column="65" selection-start="3879" selection-end="3879" vertical-scroll-proportion="-8.740741" vertical-offset="3154" max-vertical-offset="9255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="85" selection-end="85" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="840">
+        <state line="46" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="-22.041666" vertical-offset="161" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="23" selection-start="2414" selection-end="2414" vertical-scroll-proportion="3.5833333" vertical-offset="1196" max-vertical-offset="1680">
+          <folding>
+            <marker date="1415427218857" expanded="true" signature="2807:2849" placeholder="..." />
+            <marker date="1415427218857" expanded="true" signature="2822:2849" placeholder="..." />
+            <marker date="1415427218857" expanded="true" signature="2919:2946" placeholder="..." />
+            <marker date="1415427218857" expanded="true" signature="2986:3053" placeholder="..." />
+            <marker date="1415427218857" expanded="true" signature="3030:3053" placeholder="..." />
+            <marker date="1415427218857" expanded="true" signature="3126:3153" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="140" selection-end="140" vertical-scroll-proportion="0.09911894" vertical-offset="0" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-hotel-tours.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="-11.416667" vertical-offset="161" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="29" selection-start="6705" selection-end="6705" vertical-scroll-proportion="-13.583333" vertical-offset="3604" max-vertical-offset="10410">
+        <state line="710" column="18" selection-start="18718" selection-end="18718" vertical-scroll-proportion="-10.458333" vertical-offset="10369" max-vertical-offset="10875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+          <folding>
+            <marker date="1415430412801" expanded="true" signature="6:62" placeholder="..." />
+            <marker date="1415430412801" expanded="true" signature="112:137" placeholder="..." />
+            <marker date="1415430412801" expanded="true" signature="112:175" placeholder="..." />
+            <marker date="1415430412801" expanded="true" signature="120:137" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/share/php/drush/drush.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.17006803" vertical-offset="0" max-vertical-offset="2625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="40" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-1.6847575" vertical-offset="2074" max-vertical-offset="3210">
+        <state line="226" column="47" selection-start="7800" selection-end="7800" vertical-scroll-proportion="-15.041667" vertical-offset="3029" max-vertical-offset="3495">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="59" selection-start="353" selection-end="353" vertical-scroll-proportion="-7.6666665" vertical-offset="41" max-vertical-offset="495">
+          <folding>
+            <element signature="e#6#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="272" selection-end="272" vertical-scroll-proportion="0.4955947" vertical-offset="0" max-vertical-offset="454">
+          <folding>
+            <element signature="e#7#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

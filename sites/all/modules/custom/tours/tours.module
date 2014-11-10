@@ -51,14 +51,21 @@ function tours_theme() {
       'template' => 'tours-search-form',
       'render element' => 'form',
     );
+
   $items['tours_search_tours'] = array(
     'template' => 'tours-search-tours',
     'variables' => array(
       'variables' => NULL,
     ),
   );
+
   $items['tours_hotel_tours'] = array(
     'template' => 'tours-hotel-tours',
+  );
+
+  $items['tours_newsletter_form'] = array(
+    'templates' => 'tours-newsletter-form',
+    'render element' => 'form',
   );
 
   return $items;
@@ -619,7 +626,7 @@ function tours_get_tours($hotelId = NULL) {
       $dynamics = NULL;
     }
     $data = array(
-     'callback' => '1415095516683',
+     //'callback' => '1415341714601',
       'currency' => '5561',
       'nightsMin' => '6',
       'nightsMax' => '14',
@@ -688,4 +695,28 @@ function tours_get_tours($hotelId = NULL) {
     );
   }
   return false;
+}
+
+/*
+ * Form builder for tour newsletter form.
+ */
+function tours_newsletter_form($form, $form_state) {
+  $form['newsletter'] = array(
+    '#type'	=> 'textfield',
+    '#attributes' => array(
+      'class' => array('form-control'),
+    ),
+  );
+
+  $form['Subscribe'] = array(
+    '#value' => 'Subscribe',
+    '#type'	=> 'submit',
+    '#attributes' => array(
+      'class' => array('btn btn-primary'),
+    ),
+  );
+
+  $form['#theme'][] = 'tours_newsletter_form';
+
+  return $form;
 }
