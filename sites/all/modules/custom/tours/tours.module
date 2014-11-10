@@ -651,7 +651,7 @@ function tours_get_tours($hotelId = NULL) {
       'onlineConfirmFlag' => 'false',
     );
     if(isset($_GET['price'])) {
-      $data['priceMin'] = explode(";", $_GET['price'])[0];
+     // $data['priceMin'] = explode(";", $_GET['price'])[0];
       $data['priceMax'] = explode(";", $_GET['price'])[1];
     }
     else {
