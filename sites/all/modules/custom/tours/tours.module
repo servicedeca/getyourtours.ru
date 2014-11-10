@@ -659,8 +659,8 @@ function tours_get_tours($hotelId = NULL) {
       $data['priceMax'] = '15000';
     }
     if(isset($_GET['nights'])) {
-      $data['nightsMin'] = explode(";", $_GET['nights'])[0];
-      $data['nightsMax'] = explode(";", $_GET['nights'])[1];
+    /*  $data['nightsMin'] = explode(";", $_GET['nights'])[0];
+      $data['nightsMax'] = explode(";", $_GET['nights'])[1];*/
     }
     else {
       $data['nightsMin'] = '6';
