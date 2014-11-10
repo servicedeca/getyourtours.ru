@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63de79ed-eb58-40fc-97b9-1b48743813d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
     </list>
     <ignored path="tours.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tours.module" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tours.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="590" column="0" selection-start="14736" selection-end="14736" vertical-scroll-proportion="0.33333334" vertical-offset="8668" max-vertical-offset="10935">
+            <state line="590" column="0" selection-start="14736" selection-end="14736" vertical-scroll-proportion="27.416666" vertical-offset="9478" max-vertical-offset="10935">
               <folding />
             </state>
           </provider>
@@ -113,17 +113,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="page.tpl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="23" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.0" vertical-offset="1196" max-vertical-offset="1680">
+            <state line="92" column="35" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.40528634" vertical-offset="1196" max-vertical-offset="1680">
               <folding>
-                <marker date="1415427218857" expanded="true" signature="2807:2849" placeholder="..." />
-                <marker date="1415427218857" expanded="true" signature="2822:2849" placeholder="..." />
-                <marker date="1415427218857" expanded="true" signature="2919:2946" placeholder="..." />
-                <marker date="1415427218857" expanded="true" signature="2986:3053" placeholder="..." />
-                <marker date="1415427218857" expanded="true" signature="3030:3053" placeholder="..." />
-                <marker date="1415427218857" expanded="true" signature="3126:3153" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="2807:2849" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="2822:2849" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="2919:2946" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="2989:3056" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="3033:3056" placeholder="..." />
+                <marker date="1415617025890" expanded="true" signature="3129:3156" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -170,12 +170,12 @@
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
       </list>
     </option>
   </component>
@@ -486,7 +486,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28719345" sideWeight="0.49920762" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4378321" sideWeight="0.49972752" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43876463" sideWeight="0.49972752" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2735695" sideWeight="0.5007924" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46645367" sideWeight="0.50027245" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -763,20 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="23" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.0" vertical-offset="1196" max-vertical-offset="1680">
-          <folding>
-            <marker date="1415427218857" expanded="true" signature="2807:2849" placeholder="..." />
-            <marker date="1415427218857" expanded="true" signature="2822:2849" placeholder="..." />
-            <marker date="1415427218857" expanded="true" signature="2919:2946" placeholder="..." />
-            <marker date="1415427218857" expanded="true" signature="2986:3053" placeholder="..." />
-            <marker date="1415427218857" expanded="true" signature="3030:3053" placeholder="..." />
-            <marker date="1415427218857" expanded="true" signature="3126:3153" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="26" selection-start="140" selection-end="140" vertical-scroll-proportion="0.09911894" vertical-offset="0" max-vertical-offset="1575" />
@@ -831,8 +817,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="590" column="0" selection-start="14736" selection-end="14736" vertical-scroll-proportion="0.33333334" vertical-offset="8668" max-vertical-offset="10935">
+        <state line="590" column="0" selection-start="14736" selection-end="14736" vertical-scroll-proportion="27.416666" vertical-offset="9478" max-vertical-offset="10935">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="35" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.40528634" vertical-offset="1196" max-vertical-offset="1680">
+          <folding>
+            <marker date="1415617025890" expanded="true" signature="2807:2849" placeholder="..." />
+            <marker date="1415617025890" expanded="true" signature="2822:2849" placeholder="..." />
+            <marker date="1415617025890" expanded="true" signature="2919:2946" placeholder="..." />
+            <marker date="1415617025890" expanded="true" signature="2989:3056" placeholder="..." />
+            <marker date="1415617025890" expanded="true" signature="3033:3056" placeholder="..." />
+            <marker date="1415617025890" expanded="true" signature="3129:3156" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
