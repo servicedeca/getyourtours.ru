@@ -90,7 +90,7 @@
             <?php print t('Have Questions?')?>
           </h4>
           <h4 class="text-color">
-            <?php print t('+1-202-555-0173')?></h4>
+            <?php print t('+7-(383)-354-14-33')?></h4>
           <h4>
             <a href="#" class="text-color">
               <?php t('support@traveler.com') ?>
