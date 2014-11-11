@@ -12,7 +12,7 @@ function tours_theme_preprocess_page(&$vars) {
     'alt' => t(variable_get('site_name')),
     'title' => t(variable_get('site_name')),
   ));
-  $vars['logo'] = l($logo, '/<front>', array('query' => $_GET,
+  $vars['logo'] = l($logo, '', array('query' => $_GET,
     'html' => TRUE,
     'attributes' => array('class' => 'logo',)));
 
@@ -32,7 +32,7 @@ function tours_theme_preprocess_page(&$vars) {
      $vars['logout_register'] = l(t('Logout'), 'user/logout');
   }
   else {
-      $vars['Login_profile'] =  l(t('Login'), 'user/login');
+      $vars['login_profile'] =  l(t('Login'), 'user/login');
       $vars['logout_register'] = l(t('Register'), 'user/register');
   }
 

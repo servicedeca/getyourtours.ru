@@ -22,7 +22,7 @@ function tours_destinations_ctools_content_types() {
  */
 function tours_destinations_content_type_render($subtype, $conf, $panel_args, $context) {
   $block = new stdClass();
-  $block->content = views_embed_view('term', 'destinations');
+ // $block->content = views_embed_view('terms', 'destinations');
 
   return $block;
 }
