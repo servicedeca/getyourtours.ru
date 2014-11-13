@@ -226,3 +226,121 @@ function tours_preprocess_tours_newsletter_form(&$vars) {
   $vars['newsletter'] = $vars['form']['newsletter'];
   $vars['Subscribe'] = $vars['form']['Subscribe'];
 }
+
+/**
+ * Preprocess variables for node.
+ */
+function tours_preprocess_node(&$vars, $hook) {
+  $node = $vars['node'];
+  $view_mode = $vars['view_mode'];
+
+  $vars['theme_hook_suggestions'][] = 'node__' . $view_mode;
+  $vars['theme_hook_suggestions'][] = 'node__' . $node->type . '_' . str_replace('-', '_', $view_mode);
+
+  $preprocesses[] = 'tours_preprocess_node__' . $view_mode;
+  $preprocesses[] = 'tours_preprocess_node__' . $node->type;
+  $preprocesses[] = 'tours_preprocess_node__' . $node->type . '_' . str_replace('-', '_', $view_mode);
+
+  foreach ($preprocesses as $preprocess) {
+    if (function_exists($preprocess)) {
+      $preprocess($vars, $hook);
+    }
+  }
+}
+
+/**
+ * Process variables for views-exposed-form.tpl.php.
+ */
+function tours_preprocess_views_exposed_form(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Process variables for views-view.tpl.php.
+ */
+function tours_preprocess_views_view(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Process variables for views-view-unformatted.tpl.php.
+ */
+function tours_preprocess_views_view_unformatted(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Process variables for views-view-fields.tpl.php.
+ */
+function tours_preprocess_views_view_fields(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Process variables for views-view-grid.tpl.php.
+ */
+function tours_preprocess_views_view_grid(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Process variables for views-view-table.tpl.php.
+ */
+function tours_preprocess_views_view_table(&$vars) {
+  if (isset($vars['theme_hook_suggestion'])) {
+    $function = 'tours_preprocess_' . $vars['theme_hook_suggestion'];
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+
+/*
+ * Process variables for views-view-unformatted--terms--destinations.tpl.php.
+ */
+function tours_preprocess_views_view_unformatted__terms__destinations(&$vars) {
+  $a =1 ;
+  foreach($vars['view']->result as $key => $value) {
+    $image_uri = $value->field_field_main_image[0]['raw']['uri'];
+    $name = $value->taxonomy_term_data_name;
+    $images = theme('image', array(
+      'path' => $image_uri,
+      'width' => '100%',
+      'height' => '100%',
+      'alt' => $name,
+      'title' => $name,
+      'attributes' => array(
+        'class' => array('curved'),
+      ),
+    ));
+    $vars['images'][$key]['image'] = l($images, 'taxonomy/term/'. $value->tid, array('html' => TRUE,
+      'attributes' => array('class' => 'curved',)));
+    $vars['images'][$key]['name'] = $value->taxonomy_term_data_name;
+  }
+}

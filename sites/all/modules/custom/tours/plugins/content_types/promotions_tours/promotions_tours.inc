@@ -31,7 +31,7 @@ function tours_promotions_tours_content_type_render($subtype, $conf, $panel_args
  * Implements hook_content_type_theme().
  */
 function tours_promotions_tours_content_type_theme(&$theme, $plugin) {
-  $theme['promotions_tours'] = array(
+  $theme['tours_promotions_tours'] = array(
     'path' => $plugin['path'],
     'template' => 'tours-promotions-tours',
   );
@@ -41,13 +41,13 @@ function tours_promotions_tours_content_type_theme(&$theme, $plugin) {
  * Process variables for excur-image-slider.tpl.php.
  */
 function template_preprocess_tours_promotions_tours(&$vars) {
-
-  foreach(tours_get_promotions_tours() as $tour) {
+    $a= 1;
+/*  foreach(tours_get_promotions_tours() as $tour) {
     $vars['tours'][] = array(
       'title' => $tour['title'],
       'country' => $tour['title'],
       'date' => $tour['date'],
       'duration' => $tour['duration'],
     );
-  }
+  }*/
 }
