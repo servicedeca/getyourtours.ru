@@ -1,0 +1,16 @@
+body { 
+    background-image: url(../img/tours.jpg);
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-position: center top;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;  
+    z-index: 0;
+    height: 2500px;
+}
+
+
