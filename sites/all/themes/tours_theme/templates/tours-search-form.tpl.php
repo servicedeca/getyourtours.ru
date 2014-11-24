@@ -59,18 +59,14 @@
           <label><?php print t('Children');?></label>
           <div class="people-children-count">
             <div id="children-1" class="form-children item-count-children">
+              <?php print render($birthday1); ?>
             </div>
             <div id="children-2" class="form-children item-count-children">
+              <?php print render($birthday2); ?>
             </div>
           </div>
           <?php print render($children);?>
         </div>
-        </div>
-        <div class="col-lg-1">
-          <?php print render($birthday1); ?>
-          </div>
-          <div class="col-lg-1">
-          <?php print render($birthday2); ?>
         </div>
       <div class="col-lg-2">
         <label><?php print t('Duration');?></label>

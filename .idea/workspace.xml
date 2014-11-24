@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63de79ed-eb58-40fc-97b9-1b48743813d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/views/terms/views-view-unformatted--terms--destinations.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/vladimir.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/city/city.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" afterPath="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tours.iws" />
@@ -33,57 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tours_theme.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="483" column="19" selection-start="8876" selection-end="8876" vertical-scroll-proportion="0.7364017" vertical-offset="6893" max-vertical-offset="10530">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="promotions_tours.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="600" selection-end="600" vertical-scroll-proportion="-6.3333335" vertical-offset="193" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tours-promotions-tours.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tours-text-block.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="0" selection-start="10464" selection-end="10464" vertical-scroll-proportion="-6.2916665" vertical-offset="4754" max-vertical-offset="5265">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="country.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="893" selection-end="893" vertical-scroll-proportion="-15.166667" vertical-offset="131" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -92,31 +43,79 @@
       <file leaf-file-name="destinations.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="2" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="480">
+            <state line="22" column="0" selection-start="442" selection-end="531" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views-view-unformatted--terms--destinations.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/views/terms/views-view-unformatted--terms--destinations.tpl.php">
+      <file leaf-file-name="country.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="4" selection-start="588" selection-end="588" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="465">
-              <folding>
-                <marker date="1415791046943" expanded="true" signature="242:348" placeholder="..." />
-                <marker date="1415791046943" expanded="true" signature="272:348" placeholder="..." />
-                <marker date="1415791046943" expanded="true" signature="314:348" placeholder="..." />
-                <marker date="1415791046943" expanded="true" signature="434:501" placeholder="..." />
-                <marker date="1415791046943" expanded="true" signature="469:501" placeholder="..." />
-              </folding>
+            <state line="17" column="1" selection-start="348" selection-end="348" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="465">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tours-search-tours.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php">
+      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="975">
+            <state line="4" column="3" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="5265">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="27" selection-start="716" selection-end="716" vertical-scroll-proportion="-8.75" vertical-offset="135" max-vertical-offset="1680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours_theme.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/tours_theme.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="29" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="city.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/city/city.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="3" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="34" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours.install" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.install">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="3" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tours.module" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="445" column="4" selection-start="11130" selection-end="11154" vertical-scroll-proportion="0.32332563" vertical-offset="6365" max-vertical-offset="10650">
               <folding />
             </state>
           </provider>
@@ -135,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.info" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/html.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/js/tours.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/js/tours_theme.js" />
@@ -158,11 +156,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_form/search_form.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_block/tours-search-block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_block/search_block.inc" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours_views.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc" />
@@ -170,8 +165,13 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/template.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/city/city.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/tours/tours.info" />
       </list>
     </option>
   </component>
@@ -188,14 +188,24 @@
           <path_mapping local_path="$PROJECT_DIR$" remote_path="$USER_HOME$/project/excur" />
         </path_mappings>
       </server>
+      <server host="weathermap" name="weathermap" use_path_mappings="true">
+        <path_mappings>
+          <path_mapping local_path="$PROJECT_DIR$" remote_path="$PROJECT_DIR$/../weathermap" />
+        </path_mappings>
+      </server>
+      <server host="realty" name="realty" use_path_mappings="true">
+        <path_mappings>
+          <path_mapping local_path="$PROJECT_DIR$" remote_path="$PROJECT_DIR$/../realty" />
+        </path_mappings>
+      </server>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="43" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1877" />
-    <option name="height" value="1084" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -252,20 +262,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="sites" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -366,44 +362,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours_theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="terms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -413,86 +371,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content_types" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content_types" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="country" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,7 +401,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realty" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Configurable.PHP.Servers" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -535,11 +413,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/search_form" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block" />
       <recent name="$PROJECT_DIR$/sites/all/themes/tours_theme/css" />
-      <recent name="$PROJECT_DIR$/sites/all/themes/tours_theme/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types" />
@@ -593,17 +471,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="-4" width="1877" height="1084" extended-state="6" />
+    <frame x="43" y="24" width="1877" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21035422" sideWeight="0.49920762" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43876463" sideWeight="0.49972752" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20054495" sideWeight="0.49920762" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43876463" sideWeight="0.49972752" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2735695" sideWeight="0.5007924" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46645367" sideWeight="0.50027245" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -611,6 +488,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -651,20 +529,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="598" />
+      <option name="time" value="609" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="93135" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="44" selection-end="44" vertical-scroll-proportion="0.032894738" vertical-offset="0" max-vertical-offset="912" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/ctools/ctools.module">
       <provider selected="true" editor-type-id="text-editor">
         <state line="682" column="0" selection-start="20353" selection-end="20353" vertical-scroll-proportion="0.1463964" vertical-offset="9995" max-vertical-offset="14355" />
@@ -730,11 +598,6 @@
         <state line="281" column="0" selection-start="8200" selection-end="8200" vertical-scroll-proportion="0.3496659" vertical-offset="3953" max-vertical-offset="12330" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.install">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="3" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2251732" vertical-offset="0" max-vertical-offset="866" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/js/slimmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="33" selection-start="449" selection-end="454" vertical-scroll-proportion="-0.102622576" vertical-offset="240" max-vertical-offset="2325" />
@@ -773,11 +636,6 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/ion.rangeSlider.skinFlat.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="30" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.6797753" vertical-offset="535" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/tours_theme.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="530" selection-end="530" vertical-scroll-proportion="0.23026316" vertical-offset="0" max-vertical-offset="912" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/images/sprite-skin-flat.png">
@@ -828,38 +686,57 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.35022026" vertical-offset="816" max-vertical-offset="3480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="27" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2745" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="0.2973568" vertical-offset="0" max-vertical-offset="454" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="590" column="0" selection-start="14736" selection-end="14736" vertical-scroll-proportion="0.0" vertical-offset="8850" max-vertical-offset="10965">
-          <folding />
-        </state>
+        <state line="65" column="0" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.35022026" vertical-offset="816" max-vertical-offset="3480" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-hotel-tours.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="615">
-          <folding />
-        </state>
+        <state line="29" column="30" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/garland/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1143" column="14" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.9776248" vertical-offset="16577" max-vertical-offset="18915" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="600" selection-end="600" vertical-scroll-proportion="0.39838338" vertical-offset="0" max-vertical-offset="866" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="454" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="25" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="674" column="0" selection-start="11950" selection-end="11969" vertical-scroll-proportion="0.0" vertical-offset="9520" max-vertical-offset="10560" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/js/tours_theme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="38" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2670" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-form.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1575">
+        <state line="64" column="48" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-28.583334" vertical-offset="274" max-vertical-offset="1515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-newsletter-form.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="29" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/views/terms/views-view-unformatted--terms--destinations.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
@@ -869,94 +746,72 @@
         <state line="10" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.17006803" vertical-offset="0" max-vertical-offset="2625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/city/city.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="2" selection-start="1564" selection-end="1587" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1680">
-          <folding>
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1415617025890" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/tours-search-tours.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="975">
+        <state line="16" column="3" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="480">
+        <state line="13" column="3" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/text_block/tours-text-block.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="454">
+        <state line="2" column="0" selection-start="34" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/views/terms/views-view-unformatted--terms--destinations.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/tours_theme.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="588" selection-end="588" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="465">
-          <folding>
-            <marker date="1415791046943" expanded="true" signature="242:348" placeholder="..." />
-            <marker date="1415791046943" expanded="true" signature="272:348" placeholder="..." />
-            <marker date="1415791046943" expanded="true" signature="314:348" placeholder="..." />
-            <marker date="1415791046943" expanded="true" signature="434:501" placeholder="..." />
-            <marker date="1415791046943" expanded="true" signature="469:501" placeholder="..." />
-          </folding>
+        <state line="21" column="29" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/tours-promotions-tours.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="868">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/promotions_tours/promotions_tours.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="600" selection-end="600" vertical-scroll-proportion="-6.3333335" vertical-offset="193" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/destinations/destinations.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="0" selection-start="10464" selection-end="10464" vertical-scroll-proportion="-6.2916665" vertical-offset="4754" max-vertical-offset="5265">
+        <state line="22" column="0" selection-start="442" selection-end="531" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/plugins/content_types/country/country.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="893" selection-end="893" vertical-scroll-proportion="-15.166667" vertical-offset="131" max-vertical-offset="585">
+        <state line="17" column="1" selection-start="348" selection-end="348" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/garland/style.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1143" column="14" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.9776248" vertical-offset="16577" max-vertical-offset="18915">
+        <state line="4" column="3" selection-start="53" selection-end="53" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="5265">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/css/tours_theme.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tours_theme/templates/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="483" column="19" selection-start="8876" selection-end="8876" vertical-scroll-proportion="0.7364017" vertical-offset="6893" max-vertical-offset="10530">
+        <state line="23" column="27" selection-start="716" selection-end="716" vertical-scroll-proportion="-8.75" vertical-offset="135" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/tours/tours.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="445" column="4" selection-start="11130" selection-end="11154" vertical-scroll-proportion="0.32332563" vertical-offset="6365" max-vertical-offset="10650">
           <folding />
         </state>
       </provider>

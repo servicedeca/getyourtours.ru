@@ -13,26 +13,31 @@ function tours_menu() {
     'page callback' => 'tours_get_tours',
     'access callback' => TRUE,
   );
+
   $item['search_tours'] = array(
     'title' => 'Search tour',
     'page callback' => 'tours_search_tours',
     'access callback' => TRUE,
   );
+
   $item['hotel/%'] = array(
     'title' => 'Hotel',
     'page callback' => 'tours_hotel_tours',
     'page arguments' => array(1),
     'access callback' => TRUE,
   );
+
   $item['get_region'] = array(
     'title' => 'region',
     'page callback' => 'tours_get_region',
     'access callback' => TRUE,
   );
+
   $item['get_hotel'] = array(
     'page callback' => 'tours_get_hotel',
     'access callback' => TRUE,
   );
+
   $item['tours/crh_autocomplete'] = array(
     'page callback' => 'tours_autocomplete_crh',
     'access arguments' => array('access content'),
@@ -100,35 +105,10 @@ function tours_main_text_block() {
     foreach ($nids as $nid) {
       $nodes[] = node_load($nid);
     }
-
     return $nodes;
   }
 
   return array();
-}
-
-/*
- * Get Promotions tours.
- */
-function tours_get_promotions_tours() {
-  return array(
-    '0' => array(
-      'title' => 'Море восторга в Шарм-эль-Шейхе!',
-      'country' => 'Египет',
-      'date' => 'Вылеты 5—28 ноября',
-      'duration' => '7 ночей',
-      'price' => '200',
-      'image' => 'http://static4.onlinetours.ru/system/uploads/special_offer_photo/image/5735/main_281.jpg'
-    ),
-    '1' => array(
-      'title' => 'Ммм... Bellissimo! Вкусные итальянские цены!!',
-      'country' => 'Италия',
-      'date' => 'Вылеты 19 ноября — 24 января',
-      'duration' => '7 ночей',
-      'price' => '200',
-      'image' => 'http://static2.onlinetours.ru/system/uploads/special_offer_photo/image/5814/main________.jpg'
-    ),
-  );
 }
 
 /*
@@ -222,15 +202,16 @@ function tours_get_crh($city) {
     $data = drupal_http_request($full_url);
     $result['region'] = json_decode($data->data)->tours;
     $result['hotel'] = json_decode($data->data)->hotels;
-    foreach($country as $key => $val) {
+    foreach($country as $val) {
       $data_tour[] = $val;
     }
     foreach($result as $res) {
-      foreach($res as $id => $value) {
+      foreach($res as $value) {
         $data_tour[] = $value->name;
       }
     }
   }
+
   return $data_tour;
 }
 
@@ -260,7 +241,7 @@ function tours_check_crh($string, $city) {
     $full_url = url($url, array('query' => $query));
     $data = drupal_http_request($full_url);
     $region = json_decode($data->data)->tours;
-    foreach($region as $key => $value) {
+    foreach($region as $value) {
       if($value->name == $string) {
         return array(
           'country' => $id,
@@ -269,7 +250,7 @@ function tours_check_crh($string, $city) {
       }
     }
     $hotel = json_decode($data->data)->hotels;
-    foreach($hotel as $key => $value) {
+    foreach($hotel as $value) {
       if($value->name == $string) {
         return array(
           'country' => $id,
@@ -279,6 +260,7 @@ function tours_check_crh($string, $city) {
       }
     }
   }
+
   return false;
 }
 
@@ -462,7 +444,6 @@ function tours_tour_search_form($form, $form_state) {
     '#type' => 'select',
     '#default_value' => isset($_GET['birthday1']) ? $_GET['birthday1']: 0,
     '#options' => $birthday,
-    '#disabled' => 'disabled',
     '#attributes' => array(
       'class' => array('form-control'),
       'id' => array('children-birthday1'),
@@ -472,7 +453,6 @@ function tours_tour_search_form($form, $form_state) {
     '#type' => 'select',
     '#options' => $birthday,
     '#default_value' => isset($_GET['birthday2']) ? $_GET['birthday2']: 0,
-    '#disabled' => true,
     '#attributes' => array(
       'class' => array('form-control'),
       'id' => array('children-birthday2'),
@@ -506,6 +486,7 @@ function tours_tour_search_form($form, $form_state) {
   $form['#method'][] = 'GET';
   $form['#theme'][] = 'tours_search_form';
   $form['#action'] = '/search_tours';
+
   return $form;
 }
 

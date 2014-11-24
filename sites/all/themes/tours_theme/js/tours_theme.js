@@ -108,12 +108,22 @@ Drupal.behaviors.toursAddChildren = {
       $("#children-birthday2").show();
     }
 
+    $('#children-1').click(function() {
+      $('#children-birthday1').show();
+    });
+
+    $('#children-birthday1').click(function() {
+      alert('ok');
+      $('#children-birthday1').hide();
+    });
+
     $(".form-children").click(function() {
+
       var id = $(this).attr('id');
       var id_next = parseInt(id.replace(/\D+/g,""))+1;
       $("#tours-count-children").val(id_next-1);
-      if($('#children-'+id_next).attr('class') == 'form-children item-count-children' &&
-        $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children light') {
+      if( $('#children-'+id_next).attr('class') == 'form-children item-count-children' &&
+         $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children light' ) {
         $(this).removeClass('light');
       }
       else {
@@ -128,22 +138,7 @@ Drupal.behaviors.toursAddChildren = {
           }
         }
       }
-      if($('#children-'+id_next-1).attr('class') == 'form-children item-count-children') {
-        document.getElementById('children-birthday1').disabled = true;
-      }
-      else {
-        document.getElementById('children-birthday1').disabled = false;
-      }
-      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children') {
-        document.getElementById('children-birthday2').disabled = true;
-      }
-      else {
-        document.getElementById('children-birthday2').disabled = false;
-      }
-      if($('#children-'+(id_next)).attr('class') == 'form-children item-count-children' &&
-        $('#children-'+(id_next-1)).attr('class') == 'form-children item-count-children') {
-        document.getElementById('children-birthday1').disabled = true;
-      }
+
     })
   })
 };

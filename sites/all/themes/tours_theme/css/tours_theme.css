@@ -674,10 +674,12 @@ footer#main-footer h4 {
 
 #children-birthday1 {
   padding: 0;
+  display: none;
 }
 
 #children-birthday2 {
   padding: 0;
+  display: none;
 }
 
 .form-item-birthday1{
